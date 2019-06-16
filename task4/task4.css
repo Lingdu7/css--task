@@ -1,0 +1,80 @@
+body{
+    background-color:#eff0f4;
+    margin: 0px ;
+    padding: 0px;
+    font-family: STHeiti;
+    
+}
+.header{
+    background-color: #5fc0cd;
+    height: 45px;
+    width: 100%;
+    margin-bottom: 7px;
+}
+.letf{
+    position:absolute ;
+    left: 10px;
+    margin-top:12px;
+}
+.right{
+    position:absolute ;
+    right: 10px;
+    margin-top:12px;
+}
+.textcenter{ 
+    text-align:center;
+    font-size: 20px;
+   padding-top:10px ;
+   margin:0px ;
+    color: white;
+}
+.input{
+    height:50px;
+    background-color: white;
+}
+.passwordmargin{
+    margin: 10px 0 35px;
+}
+.textcolor{
+    color:#5fc0cd;
+    text-decoration:none;
+    
+}
+.input input{
+    font-size: 16px;
+    color: #e1e5e7;
+    margin-top: 14px;
+}
+.white{
+    color: white;
+    display:block;
+    margin: 0 auto;;
+}
+.anone{
+    text-decoration:none;
+    color:white;
+}
+.formletr{
+    position:absolute ;
+    left: 90px;
+    width: 65%;
+    border:0;
+    outline: none;
+}
+.input img{
+    width:40px;
+    margin: 10px ;
+    padding-left: 10px;
+}
+.nonebutton
+{
+    border: none; 
+    background-color: transparent;
+     outline: none;
+}
+.button-white{color: white; 
+    font-size: 20px;
+    border: none; 
+    outline: none;
+    font-family: STHeiti;
+}
