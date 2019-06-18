@@ -1,4 +1,4 @@
-html body{
+html,body{
     max-width: 768px;
     min-width:320px;
     width: 100%;
@@ -101,10 +101,10 @@ html body{
         }
         .tdwidth{
             width: 74px;
+            
         }
     footer{
         height: 55px;
-        
     }
     .footer{
         position: fixed;
