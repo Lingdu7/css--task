@@ -7,10 +7,6 @@ body {
   font-family: STHeiti;
   background-color: #fff;
 }
-button:focus {
-     
-    outline:  none;
-}
 .icon1 {
   background: url(xuebitu.png);
   background-size: 100px 50px;
@@ -71,14 +67,15 @@ select {
   font-size: 14px;
  background-color: rgb(248, 248, 248);
 }
-button {
+button {/* 清除button默认格式*/
     border: none;
     outline: none;
   }
-header {
+header {/* 空盒子，变相让固定定位回归文档流 */
   height: 45px;
+  
 }
-.header {
+.header {/* 头部背景+弹性盒子居中对齐+固定定位*/
   height: 45px;
   width: 100%;
   max-width: 768px;
@@ -88,9 +85,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index:777;
 }
 
-.butule {
+.butule {/* 两个按钮的盒子+两端对齐 */
   width: 144px;
   height: 35px;
   background-color: #55a8b3;
@@ -98,7 +96,7 @@ header {
   justify-content: space-between;
   border-radius: 5px;
 }
-.button-bule {
+.button-bule {/* 找护工的盒子 */
   color: #5fc0cd;
   width: 72px;
   background-color: #fff;
@@ -109,7 +107,7 @@ header {
   text-align: center;
   padding: 0px;
 }
-.button-white {
+.button-white {/* 找雇主的盒子 */
   width: 72px;
   color: #fff;
   font-size: 17px;
@@ -120,14 +118,14 @@ header {
   text-align: center;
   padding: 0px;
 }
-.button-icon {
+.button-icon {/* 右上角图标按钮 */
   width: 21px;
   height: 23px;
   position: absolute;
   right: 14px;
   top: 10px;
 }
-.Selectionbox {
+.Selectionbox {/* 下拉盒子+固定定位+弹性盒子居中对齐 */
   height: 40px;
   width: 100%;
   max-width: 768px;
@@ -137,45 +135,56 @@ header {
   top: 45px;
   display:flex;
   align-items: center;
-  z-index:777;
+  z-index:777;/* 层叠优先级*/
 }
-.content {
-  width: cala(100%-30px);
+.content {/* 表单内容盒子 */
+  width: calc(100%-30px);/* 计算 */
   padding: 0px 15px;
   height: 90px;
   display: flex;
   border-bottom: 1px solid #e1e5e7;
 }
-ul {
+.leftinfo {/* 表单左边盒子 */
+  min-width: 120px;
+  width: 60%;
+}
+.rightinfo {/* 表单右边盒子+相对定位给图标固定定位做定位用 */
+  width: 40%;
+  line-height: 90px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+ul {/* 清除ul默认格式 */
   margin: 0;
   list-style: none;
   padding: 0;
 }
-h3 {
-  margin: 0;
-}
-ul>li {
+ul>li {/* 列表单行高度+字垂直居中 */
   height: 30px;
   line-height: 30px;
 }
-footer {
-  height: 44px;
-}
-li h3 {
+li h3 {/* 文字格式+清除外边距 */
   font-size: 16px;
   font-weight: 300;
+  margin: 0;
 }
- 
-i {
+i {/* 雪碧图+图标尺寸 */
   background: url(xuebitu.png);
-  background-size: 100px 50px;
-  display: inline;
+  background-size: 100px 50px;/* 雪碧图尺寸*/
+  display: inline-block;
   width: 20px;
   height: 25px;
   float: left;
 }
-
-footer > div {
+.time {/* 溢出时隐藏显示省略号*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 30px;
+}
+footer{height: 44px;margin-top:5px ;}
+footer > div {/* 页脚盒子+固定定位+弹性盒子居中*/
   height: 44px;
   width: 100%;
   vertical-align: middle;
@@ -187,16 +196,15 @@ footer > div {
   justify-content: center;
   align-items: center;
   border-top: 1px solid #e1e5e7;
-  position: fixed;
 }
 
-.yuan {
+.circle-button {/* 中间圆钮*/
   height: 42px;
   width: 42px;
   border-radius: 50%;
   background-color: #5fc0cd;
 }
-.zuoyou {
+.l-r-button {/* 左右按钮*/
   width: 50px;
   color: #5fc0cd;
   font-size: 12px;
@@ -205,30 +213,11 @@ footer > div {
   text-align: center;
   padding: 0px;
 }
-.leftinfo {
-  min-width: 120px;
-  width: 60%;
-  flex-direction: column;
-  flex: auto;
-}
-.time {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  padding-right: 30px;
-}
-.color999 {
+
+
+.color-999 {
   color: #999;
 }
-.rightinfo {
-  width: 40%;
-  flex-direction: column;
-  flex: auto;
-  line-height: 90px;
-  position: relative;
-  top: 0;
-  left: 0;
-}
-.colorred {
+.color-red {
   color: red;
 }
