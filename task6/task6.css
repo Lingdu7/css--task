@@ -131,6 +131,7 @@ header {
   width: 100%;
   max-width: 768px;
   border-bottom: 1px solid #e1e5e7;
+  background-color: rgb(248, 248, 248);
   position: fixed;
   top: 45px;
   display:flex;
