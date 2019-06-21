@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
     <link rel="stylesheet" type="text/css" href="task6.css">
     <title>个人主页</title>
 </head>
@@ -11,27 +12,52 @@
     <div class="header">
           <div class="butule">
             <button class="button-white"type="button" >找雇主</button>
-            <button class="button-bule"type="button" >找护工</button>
+            <button class=" button-bule"type="button" >找护工</button>
         </div>
         <button class="button-icon icon1"type="button" ></button>
       </div>  
 </div>
   </header>
   <div style="height: 40px">
-  <div class="daohang">
-      <div style="flex:auto;width: 33%;">
-        <form  action="">
-        <select name="cars">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="fiat">Fiat</option>
-        <option value="audi">Audi</option>
-        </select>
-        </form>
+  <div class="Selectionbox">
+    <div class="Selectionlr" >
+     <form  action="">
+   <i class="icon8 "></i>
+      <select >
+      <option selected>所在地</option>
+      <option value="1">北京</option>
+      <option value="2">上海</option>
+      <option value="3">广州</option>
+      </select>
+    </form>  
     </div>
+    <div class="Selectionlr"  >
+            <i class="icon8 "></i>
+            <form  action="">   
+             <select style="border-left: 1px solid #ced4da;border-right: 1px solid #ced4da;border-radius: 0%;" >    
+             <option selected>食宿</option>
+             <option value="1">管吃</option>
+             <option value="2">不管</option>
+             <option value="3">餐补</option>
+             </select>
+           </form>  
+     </div>
+     <div class="Selectionlr"   >
+
+            <i class="icon8 "></i>
+            <form  action="">
+             <select  >
+             <option selected>病人情况</option>
+             <option value="1">嗯</option>
+             <option value="2">啊</option>
+             <option value="3">哦</option>
+             </select>
+           </form>  
+           </div>
   </div>  
+
   </div>
-  <div class="biaoge">
+  <div class="content">
       <div class="leftinfo">
          <ul>
              <li>
@@ -49,7 +75,7 @@
             <span class="colorred">25元/小时 <i class="icon4"></i></span> 
         </div>
   </div>
-  <div class="biaoge">
+  <div class="content">
         <div class="leftinfo">
            <ul>
                <li>
@@ -67,7 +93,7 @@
               <span class="colorred">25元/小时 <i class="icon4"></i></span> 
           </div>
     </div>
-    <div class="biaoge">
+    <div class="content">
             <div class="leftinfo">
                <ul>
                    <li>
@@ -85,7 +111,7 @@
                   <span class="colorred">25元/小时 <i class="icon4"></i></span> 
               </div>
         </div>
-        <div class="biaoge">
+        <div class="content">
                 <div class="leftinfo">
                    <ul>
                        <li>
@@ -103,7 +129,7 @@
                       <span class="colorred">25元/小时 <i class="icon4"></i></span> 
                   </div>
             </div>
-            <div class="biaoge">
+            <div class="content">
                     <div class="leftinfo">
                        <ul>
                            <li>
@@ -123,10 +149,13 @@
                 </div>
   <footer>
       <div class="footer">
-          <button class="zuoyou"type="button" ><i class="icon5 "></i><br><p>首页</p></button>
-          <button class="yuan"type="button" style="margin: 0px;" ><i class="icon6 "></i></button>
-          <button class="zuoyou" type="button" ><i class="icon7 "></i><br><p style="color: gray">我的</p></button>
+          <div style="width: 50%; display:flex; justify-content: space-between;">
+          <button class="zuoyou"type="button" ><i class="icon5 "></i><br><p style="margin-top: 0">首页</p></button>
+        <button class="yuan "type="button" style="margin: 0px;" > <i class="icon6 "></i></button>
+          <button class="zuoyou" type="button" ><i class="icon7 "></i><br><p style="color: gray;margin-top: 0">我的</p></button>
+        </div>
       </div>
     </footer>
+
 </body>
 </html>
