@@ -53,12 +53,18 @@ button:focus {
     top: 0;
     left: 0;
    }
+   .Gradient{
+    border-left: 1px solid #ced4da;
+    border-right: 1px solid #ced4da;
+    border-image:linear-gradient(to top,#ffffff,#d6d6d6,#ffffff) 1 10;
+    border-radius: 0%;
+   }
 select {
   border: none;
   outline: none;
-  appearance:icon;
-  -moz-appearance:icon;
-  -webkit-appearance:icon;
+  appearance: none;;
+  -moz-appearance:none;
+  -webkit-appearance:none;
   width: 100%;
   height: 40px;
   padding: 10px;
@@ -121,15 +127,15 @@ header {
   top: 10px;
 }
 .Selectionbox {
-  height: 39px;
+  height: 40px;
   width: 100%;
   max-width: 768px;
   border-bottom: 1px solid #e1e5e7;
-  background-color: #fff;
   position: fixed;
   top: 45px;
   display:flex;
   align-items: center;
+  z-index:777;
 }
 .content {
   width: cala(100%-30px);
@@ -172,13 +178,13 @@ footer > div {
   width: 100%;
   vertical-align: middle;
   max-width: 768px;
-  background-color: #e9e9e9;
+  background-color: rgb(248, 248, 248);
   position: fixed;
   bottom: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #cecece;
+  border-top: 1px solid #e1e5e7;
   position: fixed;
 }
 
