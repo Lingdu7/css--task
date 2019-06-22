@@ -38,10 +38,8 @@ body {
   margin:0 12px;
 }
 .icon8 {
-  background: url(icon8.png);
-  background-size: 7px 4px;
-  background-repeat: no-repeat;
-  background-position: 95% 50%;
+  background: url(icon8.png)no-repeat right 30px top 20px;;
+  background-size: 10px 19px;
 }
    .Selectionlr{
     width: 33.4%;
