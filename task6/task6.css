@@ -38,13 +38,14 @@ body {
   margin:0 12px;
 }
 .icon8 {
- background-position: -28px 0;
-  position: absolute;
-  right: 15px;
-  top: 7px;
+  background: url(icon8.png);
+  background-size: 7px 4px;
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
 }
    .Selectionlr{
     width: 33.4%;
+    height: 40px;
     position: relative;
     top: 0;
     left: 0;
@@ -150,7 +151,8 @@ header {/* 空盒子，变相让固定定位回归文档流 */
 }
 .rightinfo {/* 表单右边盒子+相对定位给图标固定定位做定位用 */
   width: 40%;
-  line-height: 90px;
+  line-height: 90px;margin-right: 30px;
+  text-align:right;
   position: relative;
   top: 0;
   left: 0;
