@@ -254,6 +254,27 @@ a{
     width:245px;height:44px;
     color: #fff;
     background-color: #fbb435;
+    z-index: 3;
+  }
+  .foont3{
+    width:40%;height:44px;
+    color: #fff;
+    line-height: 30px;
+    background-color: #f66f6f;
+    border-radius:10px !important;
+    z-index: 3;
+  }
+  .foont3:hover{
+    background-color: #d85454;
+    font-size: 18px;
+  }
+  .foont3-2{
+    width:40%;height:44px;
+    color: #fff;
+    line-height: 30px;
+    background-color: #fbb435;
+    border-radius:10px !important;
+    z-index: 3;
   }
   .white{
       color: #fff;
@@ -285,3 +306,28 @@ a{
     color: #fff;
     background-color: #1c93ad ;
     border-color: #1c93ad ;}
+
+    .h333{
+      max-width: 768px;
+      min-width: 320px;
+        width: 100%;
+        height: 65px;
+        position: fixed;
+        bottom:0px;
+        z-index: 2;
+        display: flex;
+        justify-content:space-around;
+      align-items:center; 
+  
+    }
+    .h333-1{
+      max-width: 768px;
+      min-width: 320px;
+        width: 100%;
+        height: 65px;
+        background-color: #29bde0 ;
+        opacity: 0.5;
+        position: fixed;
+        bottom:0px;
+        z-index: 1;
+    }
