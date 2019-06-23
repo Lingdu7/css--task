@@ -304,12 +304,21 @@ a{
     justify-content: space-around;
     flex-flow: wrap;
     align-content:flex-start;
+    
   }
   .content-2>div{
     width:22vw;height:22vw;
+    margin: 5%;
+    overflow:hidden;
+  }
+  .content-3{
+    width:22vw;height:22vw;
     border: 3px solid white;
     background-color: #f5c97b ;
-    margin: 5%;
+  }
+  .content-2>div:hover{
+    height:30vw;
+    margin-bottom: -5%;
   }
   .foont{
     width:245px;height:44px;
