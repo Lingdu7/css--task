@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'iconfont';  /* project id 1256602 */
+    src: url('http://at.alicdn.com/t/font_1256602_o3fdbdupj7k.eot');
+    src: url('http://at.alicdn.com/t/font_1256602_o3fdbdupj7k.eot?#iefix') format('embedded-opentype'),
+    url('http://at.alicdn.com/t/font_1256602_o3fdbdupj7k.woff2') format('woff2'),
+    url('http://at.alicdn.com/t/font_1256602_o3fdbdupj7k.woff') format('woff'),
+    url('http://at.alicdn.com/t/font_1256602_o3fdbdupj7k.ttf') format('truetype'),
+    url('http://at.alicdn.com/t/font_1256602_o3fdbdupj7k.svg#iconfont') format('svg');
+  }
+  @font-face {
+    font-family: 'iconfont';  /* project id 1256635 */
+    src: url('http://at.alicdn.com/t/font_1256635_r75b10dulr.eot');
+    src: url('http://at.alicdn.com/t/font_1256635_r75b10dulr.eot?#iefix') format('embedded-opentype'),
+    url('http://at.alicdn.com/t/font_1256635_r75b10dulr.woff2') format('woff2'),
+    url('http://at.alicdn.com/t/font_1256635_r75b10dulr.woff') format('woff'),
+    url('http://at.alicdn.com/t/font_1256635_r75b10dulr.ttf') format('truetype'),
+    url('http://at.alicdn.com/t/font_1256635_r75b10dulr.svg#iconfont') format('svg');
+  }
+  .iconfont{
+    font-family: 'iconfont';
+}
+.icon1{
+  line-height: 44px;
+  font-size: 20px;
+  margin-left:20px ;
+  color: white;
+}
+html,
+body {
+  max-width: 768px;
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: STHeiti;
+background-color: #f0f0f0;
+}
+body{
+    margin-top: 57px;
+}
+header{
+  max-width: 768px;
+  min-width: 320px;
+    width: 100%;
+    height: 44px;
+    background-color: #29bde0;
+    position: fixed;
+    top:0px;
+    z-index: 1;
+}
+hr {
+    margin: 0;
+    background: #fbb435;
+    height: 1px;
+    border: none;
+}
+.Last-game{
+    margin: 13px 18px;
+    width: calc(100% - 39px);
+    height: 98px;
+    border: 1px solid #b6b6b6;
+    background-color: #fff;
+}
+.Last-game-div{
+    position: relative;
+    left: 0;top: 0; 
+    display:flex;
+    justify-content:center;
+    align-items:center; height: 98px;
+}
+.Last-game-span{
+    font-size: 17px;
+    color: #9a9a9a;
+}
+.icon2{
+    color: #e7e7e7;
+  position: absolute; 
+    top:33px;right:1px;
+    font-size: 30px;
+    font-weight:900;
+}
+.content{
+    position: relative;
+    left: 0;top: 0; 
+    margin: 13px 18px 30px;
+    width: calc(100% - 39px);
+    height: 393px;
+    border: 1px solid #b6b6b6;
+    background-color: #fff;
+}
+.content-header{
+    display: block;
+    height: 45px; 
+    margin: 0; color: #fbb435; 
+    line-height: 45px; text-align: center
+}
+.content-div{
+width: calc(100%-50px);
+height: 68px;
+background-color: #69d1e9;
+margin: 15px 25px;
+}
+div>h4{
+    text-align:center;
+    line-height: 68px; 
+    color: white;
+    font-weight:400;
+    margin: 0;
+}
+.text-center{
+    font-size: 12px;
+    margin: 0;
+    text-align:center;
+    display: block;
+    color: #787878;
+}
+.icon3{
+    position: absolute; 
+    top:47%;right:-8px;
+    font-size: 40px;
+  color: #fbb435;
+}
+.dot-div{
+    width:61px;height:9px; 
+    position: absolute; 
+    left:50%;
+    margin:5px 0px 0px -30px;
+}
+.dot{
+    float: left;
+    margin: 0 3px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #e7e7e7;
+}
