@@ -108,6 +108,23 @@ header{
     top:0px;
     z-index: 1;
 }
+.header-2{
+    margin-left:20px;
+    font-size: 14px; 
+    line-height: 41px;
+}
+.header-2-1{
+    width:26px;height: 26px; 
+    border-radius: 50%;
+    background-color: #fbb435;
+     position: absolute;
+     top:50%;margin-top:-13px;
+     right:18px;z-index: 1;
+}
+.header-3{
+    height: 33px;
+    background-color: #29bde0
+}
 hr {
     margin: 0;
     background: #fbb435;
@@ -120,13 +137,22 @@ hr {
     height: 98px;
     border: 1px solid #b6b6b6;
     background-color: #fff;
-}
-.Last-game-div{
     position: relative;
     left: 0;top: 0; 
     display:flex;
     justify-content:center;
+    color: #9a9a9a;
     align-items:center; height: 98px;
+}
+.Last-game:hover{
+    font-size: 18px;
+    color: #fff;
+    background-color: #29bde0;
+}
+
+.Last-game-span:hover{
+    font-size: 18px;
+    color: #fff;
 }
 .Last-game-span{
     font-size: 17px;
@@ -156,10 +182,7 @@ hr {
     line-height: 45px; text-align: center
 }
 .content-div{
-width: calc(100%-50px);
-height: 68px;
-background-color: #69d1e9;
-margin: 15px 25px;
+
 }
 div>h4{
     text-align:center;
@@ -181,15 +204,23 @@ h3{ font-size: 18px;
 }
 .icon3{
     position: absolute; 
-    top:47%;right:-8px;
+    top:50%;right:-8px;
+    margin-top: -20px;
     font-size: 40px;
   color: #fbb435;
 }
+.icon3:hover{
+    color:#c98c25;
+}
 .icon4{
     position: absolute; 
-    top:47%;left:-8px;
+    top:50%;left:-8px;
+    margin-top: -20px;
     font-size: 40px;
   color: #fbb435}
+  .icon4:hover{
+      color:#c98c25;
+  }
 .dot-div{
     width:61px;height:9px; 
     position: absolute; 
@@ -204,7 +235,70 @@ h3{ font-size: 18px;
     border-radius: 50%;
     background-color: #e7e7e7;
 }
+.dot:hover {
+    background-color: #fff;
+    border:1px solid #29bde0;}
 a{
     display:block;
     text-decoration: none !important;
 }
+.h222{
+    max-width: 768px;
+    min-width: 320px;
+      width: 100%;
+      height: 95px;
+      background-color: #29bde0 ;
+      position: fixed;
+      bottom:0px;
+      z-index: 1;
+      display: flex;
+      justify-content:center;
+    align-items:center; 
+
+  }
+  .content-2{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap
+  }
+  .content-2>div{
+    width:68px;height:68px;
+    border: 3px solid white;
+    background-color: #f5c97b ;
+    margin: 17px;flex-grow:1;
+  }
+  .foont{
+    width:245px;height:44px;
+    color: #fff;
+    background-color: #fbb435;
+  }
+  .white{
+      color: #fff;
+  }
+  .btn-warning:hover {
+    color: white;
+  }
+  .btn-warning:not(:disabled):not(.disabled).active, .btn-warning:not(:disabled):not(.disabled):active, .show>.btn-warning.dropdown-toggle {
+    color: white;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #29bde0 ;
+    border-color: #29bde0 ;
+    width: 100%;
+    height: 68px;
+    line-height: 54px;
+    margin: 9px 0px;
+}
+.btn-primary:hover {
+    font-size: 20px;
+    background-color: #1c93ad ;
+    border-color: #1c93ad ;
+}
+.btn{
+    border-radius: 0;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #1c93ad ;
+    border-color: #1c93ad ;}
