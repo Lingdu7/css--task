@@ -9,12 +9,12 @@
   }
   @font-face {
     font-family: 'iconfont';  /* project id 1256635 */
-    src: url('http://at.alicdn.com/t/font_1256635_r75b10dulr.eot');
-    src: url('http://at.alicdn.com/t/font_1256635_r75b10dulr.eot?#iefix') format('embedded-opentype'),
-    url('http://at.alicdn.com/t/font_1256635_r75b10dulr.woff2') format('woff2'),
-    url('http://at.alicdn.com/t/font_1256635_r75b10dulr.woff') format('woff'),
-    url('http://at.alicdn.com/t/font_1256635_r75b10dulr.ttf') format('truetype'),
-    url('http://at.alicdn.com/t/font_1256635_r75b10dulr.svg#iconfont') format('svg');
+    src: url('http:///at.alicdn.com/t/font_1256635_g72gwcxitx.eot');
+    src: url('http:///at.alicdn.com/t/font_1256635_g72gwcxitx.eot?#iefix') format('embedded-opentype'),
+    url('http:///at.alicdn.com/t/font_1256635_g72gwcxitx.woff2') format('woff2'),
+    url('http:///at.alicdn.com/t/font_1256635_g72gwcxitx.woff') format('woff'),
+    url('http:///at.alicdn.com/t/font_1256635_g72gwcxitx.ttf') format('truetype'),
+    url('http:///at.alicdn.com/t/font_1256635_g72gwcxitx.svg#iconfont') format('svg');
   }
   .iconfont{
     font-family: 'iconfont';
@@ -25,6 +25,63 @@
   margin-left:20px ;
   color: white;
 }
+.icon1-2{
+    line-height: 44px;
+  font-size: 20px;
+  color: white;
+}
+.icon1-3{
+    line-height: 44px;
+  font-size: 20px;
+  margin-right:20px; 
+  color: white;
+}
+.h2-icon2{
+    margin-left:5px;
+    font-size: 18px;
+    color: white;
+  }
+.h2-bgc{
+    max-width: 768px;
+  min-width: 320px;
+  width: 100%;
+    height:41px; 
+    background-color: #fff; 
+    opacity: 0.8;
+    position: fixed;
+    top:45px;
+    z-index: 1;
+  }
+  .h2-bgc{
+    max-width: 768px;
+  min-width: 320px;
+  width: 100%;
+    height:74px; 
+    position: fixed;
+    top:45px;
+    z-index: 1;}
+  .h2-bgc-1{ 
+    max-width: 768px;
+    min-width: 320px;
+    width: 100%;
+    height:41px; 
+    position: fixed;
+    top:45px;
+    z-index: 1;
+  }
+  .icon2-2{
+    font-size: 15px;
+    margin: -6px 0px 0px 19px;
+    color: white;
+    opacity: 0.8;
+    float: left;
+}
+.zi{
+    font-size: 12px;
+    color: white;
+    line-height: 43px;
+    margin-left: -14px;
+}
 html,
 body {
   max-width: 768px;
@@ -33,6 +90,10 @@ body {
   margin: 0 auto;
   font-family: STHeiti;
 background-color: #f0f0f0;
+}
+.space{
+    display: flex;
+    justify-content: space-between;
 }
 body{
     margin-top: 57px;
@@ -74,7 +135,8 @@ hr {
 .icon2{
     color: #e7e7e7;
   position: absolute; 
-    top:33px;right:1px;
+  top: 50%;right: 1px;
+  margin-top: -22px;
     font-size: 30px;
     font-weight:900;
 }
@@ -103,9 +165,13 @@ div>h4{
     text-align:center;
     line-height: 68px; 
     color: white;
+    font-size: 16px;
     font-weight:400;
     margin: 0;
 }
+h3{ font-size: 18px;
+
+    font-weight:400;}
 .text-center{
     font-size: 12px;
     margin: 0;
@@ -119,6 +185,11 @@ div>h4{
     font-size: 40px;
   color: #fbb435;
 }
+.icon4{
+    position: absolute; 
+    top:47%;left:-8px;
+    font-size: 40px;
+  color: #fbb435}
 .dot-div{
     width:61px;height:9px; 
     position: absolute; 
@@ -132,4 +203,8 @@ div>h4{
     height: 9px;
     border-radius: 50%;
     background-color: #e7e7e7;
+}
+a{
+    display:block;
+    text-decoration: none !important;
 }
