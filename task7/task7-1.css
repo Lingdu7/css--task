@@ -35,6 +35,23 @@
     top:45px;
     z-index: 1;
   }
+  .ziz{
+    display: block;
+    height: 80%;
+    line-height: 52px;
+    text-align: center;
+  }
+  .ziz2{
+    height: 20%;
+     background-color:rgba(26,153,183,0.5);
+  }
+  .ziz3{
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: white;
+  }
   .h2-bgc{
     max-width: 768px;
   min-width: 320px;
