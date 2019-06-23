@@ -37,18 +37,19 @@
   }
   .ziz{
     display: block;
-    height: 80%;
-    line-height: 52px;
+    font-size: 4vw;
+    height: 15.6vw;
+    line-height: 15.6vw;
     text-align: center;
   }
   .ziz2{
-    height: 20%;
+    height: 4.45vw;
      background-color:rgba(26,153,183,0.5);
   }
   .ziz3{
     display: block;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 3vw;
+    line-height: 4.5vw;
     text-align: center;
     color: white;
   }
@@ -308,17 +309,17 @@ a{
   }
   .content-2>div{
     width:22vw;height:22vw;
-    margin: 5%;
+    margin: 5vw;
     overflow:hidden;
   }
   .content-3{
     width:22vw;height:22vw;
-    border: 3px solid white;
+    border: 1vw solid white;
     background-color: #f5c97b ;
   }
   .content-2>div:hover{
     height:30vw;
-    margin-bottom: -5%;
+    margin-bottom: -5vw;
   }
   .foont{
     width:245px;height:44px;
