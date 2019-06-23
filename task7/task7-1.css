@@ -89,6 +89,8 @@ header{
     background-color: #29bde0;
     position: fixed;
     top:0px;
+
+    border-bottom: 1px solid #74d4eb; 
     z-index: 1;
 }
 .header-2{
@@ -247,7 +249,6 @@ a{
   .result{
     width: 100%; height: 315px;
     background-color: #29bde0; 
-    border-top: 1px solid #74d4eb; 
     margin-bottom: 5px;
   }
   .result-img{
@@ -261,8 +262,25 @@ a{
   }
   .result-text2{
     width: 80%;display: block;
-     margin: 0 auto;font-size :.7rem;
+     margin: 0 auto;font-size :12px;
      color: #fff;
+  }
+  .record-div{
+    width: 80%; 
+    margin: 10px auto
+  }
+  .record-hr{
+    background-color: #dddddd;
+  }
+  .record{
+    float: right;
+    font-size: 10px;
+    color: #c7c7c7;
+  }
+  .record-2{
+    color: #a6a6a6;
+    font-size: 13px; 
+    margin: 0;
   }
   .content-2{
     display: flex;
