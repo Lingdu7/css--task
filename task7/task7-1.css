@@ -402,3 +402,29 @@ a{
         bottom:0px;
         z-index: 1;
     }
+    .icon5-div{
+      padding-top: 3vw; 
+      display: flex;
+      justify-content: space-around;
+    }
+    .icon5{
+      background:url(img/toupiao.png) ;
+      background-size: 20vw 4vw;
+      width: 4vw;height: 4vw;
+    }
+    .icon5-1{
+     background-position: 0 0;
+    }
+    .icon5-2{
+      background-position: 4.4vw 0;
+     }
+     .icon5-3{
+    background-position:9.45vw  0;
+     }
+     .icon5-4{
+      background-position:14.5vw  0;
+     }
+      button{
+      border: none;
+      outline: none !important;
+     }
