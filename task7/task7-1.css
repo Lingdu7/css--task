@@ -428,3 +428,21 @@ a{
       border: none;
       outline: none !important;
      }
+     .bttn-warning:not(:disabled):not(.disabled):active, .show>.btn-warning.dropdown-toggle {
+      color: white;
+      background-color: #d85454;
+      border-color: #d85454;}
+      .bttn-warning:hover {
+        color: #fff;
+        background-color: #d85454;
+        font-size: 18px;}
+      .bttn-warning {
+        width:40%;height:44px;
+        color: #fff;
+        line-height: 30px;
+        background-color: #f66f6f;
+        border-radius:10px !important;
+        z-index: 3;}
+        .btn.focus, .btn:focus {
+          outline: 0;
+          box-shadow: 0 0 0 0.2rem rgba(246,111,111,.25);
