@@ -40,8 +40,8 @@ nav ul {
 }
 .nav-top{
     height: 40px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 1%;
+    padding-right: 1%;
     display: flex;
     justify-content: space-between;
     align-items: center;
