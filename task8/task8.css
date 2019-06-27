@@ -1,5 +1,5 @@
 html ,body{
-    background-color: #fdfcfc;
+    background-color: #fafafa;
 }
 nav ul {
   /* 清除ul默认格式 */
@@ -54,10 +54,24 @@ top: 0;
 left: 0;
 }
 .duiqi{
+    margin-top:3px ;
+    margin-bottom:3px ;
     text-align: center;
     padding-left:30px;
     padding-right: 30px;
 }
+.duiqi1{
+    padding-top: 20px;
+    text-align: center;
+    padding-left:30px;
+    padding-right: 30px;
+}
+
+.duiqi1:hover{background-color: #f1f1f1;
+}
+.yxxy-container:hover{background-color: #f1f1f1;
+}
+
 .margin-padding0{
    margin: 0;
    padding: 0;
@@ -128,7 +142,27 @@ left: 0;
       -moz-box-shadow:0px 0px 5px #d5d5d5;
  -webkit-box-shadow:0px 0px 5px #d5d5d5; 
  box-shadow:0px 0px 5px #d5d5d5;
- 
+  }
+  .border-radius-10px{
+    height: 10px !important;
+    width: 10px !important;
+    border-radius: 50%;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+  .border-radius-10px:hover{
+      background-color: #fff;
+     
+  }
+  .shadow-centent-2px{
+    -moz-box-shadow:0px 0px 2px #d5d5d5;
+    -webkit-box-shadow:0px 0px 2px #d5d5d5; 
+    box-shadow:0px 0px 2px #d5d5d5;
+  }
+  .shadow-centent-5px{
+    -moz-box-shadow:0px 0px 5px #d5d5d5;
+    -webkit-box-shadow:0px 0px 5px #d5d5d5; 
+    box-shadow:0px 0px 5px #d5d5d5;
   }
   .position-r:hover {
     -moz-box-shadow:0px 0px 7px #999;
@@ -161,7 +195,7 @@ padding-bottom: 10px;
     background-color: #fff;
 }
 .yxxy-container{
-    border: 1px solid #999;
+    border-radius: 2%;
     height: 370px;
     padding: 20px 10px;
     display: flex;
@@ -190,7 +224,6 @@ padding-bottom: 10px;
 .hzqy{
     display:flex;
     flex-wrap: wrap; 
-    height: 176px;
     max-width: 1140px;
     width: 100%; 
     margin: 20px auto 0 auto;
@@ -217,20 +250,23 @@ padding-bottom: 10px;
     background-position: -680px 0;
   }
 .yqlj{
-    height:135px;
+    padding-top:20px;
     background-color: #fff;
     width: 100%;
     margin: 0 auto;
 }
 .yqlj li{
-    float: left;
+    flex: none;
+line-height: 50px;
     margin-right: 50px;
 }
 .yqlj div{
-    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
 }
 .yqlj ul{
-    width: 90%;
-    margin: 0 auto;
-
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;  
 }
