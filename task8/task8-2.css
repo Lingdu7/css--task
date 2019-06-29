@@ -253,6 +253,9 @@ li {
   .none , .rhxx-icon1 {
     display: none !important;
   }
+  .sm-flex {
+    background-color: #fff;
+  }
   .centent-icon {
     background: url("img/max76+min34.png");
     background-size: 198px 72px;
