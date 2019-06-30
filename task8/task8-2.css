@@ -548,6 +548,7 @@ a:active{
   }
   .nav-link-width:hover {
     width: auto;
+    color: #fff;
     background: -webkit-linear-gradient(180deg, #29b078, #18a369,#29b078); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(180deg, #29b078, #18a369,#29b078);/* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(180deg, #29b078, #18a369,#29b078);/* Firefox 3.6 - 15 */
