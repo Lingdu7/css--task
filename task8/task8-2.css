@@ -239,6 +239,55 @@ a {
 .yxxy-icon-4 {
   background-position: -333px 0;
 }
+/*合作企业*/
+.hzqy{
+    display:flex;
+    flex-wrap: wrap; 
+    max-width: 1140px;
+    width: 100%; 
+    margin: 20px auto 0 auto;
+}
+.partner-xy-cercen{
+    flex: 1;
+    text-align: center;
+    line-height: 176px;
+    background-color: #fff;
+}
+.partner-xy-cercen:hover{
+-moz-box-shadow:0px 0px 7px #999;
+ -webkit-box-shadow:0px 0px 7px #999; 
+ box-shadow:0px 0px 7px #999;
+ z-index: 7;
+}
+.shadow-centent-2px{
+    -moz-box-shadow:0px 0px 2px #d5d5d5;
+    -webkit-box-shadow:0px 0px 2px #d5d5d5; 
+    box-shadow:0px 0px 2px #d5d5d5;
+  }
+  
+.partner{
+    background: url("img/partner170x60.png");
+    height: 60px;
+    width: 170px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.partner-1 {
+    background-position: 0 0;
+  }
+  .partner-2 {
+    background-position: -170px 0;
+  }
+  .partner-3 {
+    background-position: -340px 0;
+  }
+  .partner-4 {
+    background-position: -510px 0;
+  }
+  .partner-5 {
+    background-position: -680px 0;
+  }
+/*友情链接*/
 .yqlj {
   padding-top: 20px;
   background-color: #fff;
@@ -349,6 +398,30 @@ a {
     display: block;
     border-bottom: 1px solid rgb(243, 243, 243);
   }
+  .partner-xy-cercen{
+    line-height: 120px;
+}
+.partner{
+    background-size: 638px 45px;
+    height: 45px;
+    width: 128px;
+
+}
+.partner-1 {
+    background-position: 0 0;
+  }
+  .partner-2 {
+    background-position: -128px 0;
+  }
+  .partner-3 {
+    background-position: -254px 0;
+  }
+  .partner-4 {
+    background-position: -384px 0;
+  }
+  .partner-5 {
+    background-position: -511px 0;
+  }
   .md-none {
     display: none;
   }
@@ -397,6 +470,9 @@ a {
   .yyxy-name {
     margin-top: 30px;
   }
+  .partner-xy-cercen{
+    line-height: 100px;
+}
 }
 
 @media (max-width: 576px) {
@@ -415,6 +491,9 @@ a {
     width: auto;
     flex-wrap: wrap;
   }
+  .partner-xy-cercen{
+    line-height: 80px;
+}
   .margin-l50 {
     margin-top: 30px;
   }
