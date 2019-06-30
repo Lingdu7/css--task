@@ -368,6 +368,13 @@ a {
   padding-top: 0;
   padding-bottom: 0;
 }
+.carousel-indicators li {
+width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 9px;
+    margin-left: 9px;
+}
 /*悬停*/
 .sm-flex:hover {
   -moz-box-shadow: 0px 0px 3px rgb(218, 218, 218);
@@ -470,6 +477,16 @@ a:active{
   .none-690 {
     display: none;
   }
+  .carousel-indicators li {
+    width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .carousel-indicators {
+        margin-bottom: 5px;
+    }
   .minbanner-img {
     height: 150px !important;
   }
@@ -817,3 +834,11 @@ th {
     position: relative; 
     overflow: hidden;
 }
+.margin-top-50{
+    margin-bottom: -50px;
+}
+.margin-top-50 .active {
+    background-color: #29b078 !important;
+}
+.margin-top-50  li {
+   border: 1px solid #29b078;}
