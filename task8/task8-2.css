@@ -8,9 +8,13 @@ h4 {
 }
 .qwe{
     border-bottom: 4px solid #fff;
+    
 }
 .qwe a{
     margin-top: 4px;
+}
+.qwe:hover a{
+    margin-top: 0;
 }
 hr{
     margin: 0;
@@ -133,7 +137,7 @@ a {
 .nav-link-width:hover {
   width: 72px;
   border-bottom: 4px solid #fff;
-  padding-top: 7px !important;
+  border-top: 4px solid #29b078;
   margin-right: -15px;
   margin-left: 60px !important;
 }
@@ -495,6 +499,9 @@ a:active{
     background: linear-gradient( 180deg, 180deg, #29b078, #189a64,#29b078);/* 标准的语法 */
   
 }
+.qwe:hover a{
+    margin-top: 0px;
+}
 .qwe a{
     margin-top: 0;
 }
@@ -551,6 +558,10 @@ a:active{
     padding-top: 0px !important;
     margin-right: 0px;
     margin-left: 0px !important;
+    padding-top: 0 !important;
+  }
+  .nav-link-width:hover {
+      border-top: 0;
   }
   .nav-link-width:active a{
       color: #fff !important;
