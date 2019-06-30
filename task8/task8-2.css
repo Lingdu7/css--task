@@ -561,8 +561,8 @@ a:active{
     margin-left: 0px !important;
     padding-top: 0 !important;
   }
-  .nav-link-width:hover {
-      border-top: 0;
+  .nav-link-width:hover a{
+    color: #fff;
   }
   .nav-link-width:active a{
       color: #fff !important;
