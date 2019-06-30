@@ -6,6 +6,12 @@ body {
 h4 {
   text-align: center;
 }
+.qwe{
+    border-bottom: 4px solid #fff;
+}
+.qwe a{
+    margin-top: 4px;
+}
 hr{
     margin: 0;
 }
@@ -481,6 +487,17 @@ a:active{
   .none-690 {
     display: none;
   }
+  .qwe{
+    border-bottom: 0;
+    background: -webkit-linear-gradient(180deg, #29b078, #189a64,#29b078); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(180deg, #29b078, #189a64,#29b078);/* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(180deg, #29b078, #189a64,#29b078);/* Firefox 3.6 - 15 */
+    background: linear-gradient( 180deg, 180deg, #29b078, #189a64,#29b078);/* 标准的语法 */
+  
+}
+.qwe a{
+    margin-top: 0;
+}
   .carousel-indicators li {
     width: 12px;
         height: 12px;
@@ -524,12 +541,19 @@ a:active{
   }
   .nav-link-width:hover {
     width: auto;
-    border-bottom: 2px solid #fff !important;
+    background: -webkit-linear-gradient(180deg, #29b078, #18a369,#29b078); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(180deg, #29b078, #18a369,#29b078);/* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(180deg, #29b078, #18a369,#29b078);/* Firefox 3.6 - 15 */
+    background: linear-gradient( 180deg, 180deg, #29b078, #18a369,#29b078);/* 标准的语法 */
+    border-bottom: 0;
     line-height: 50px !important;
     height: 50px !important;
     padding-top: 0px !important;
     margin-right: 0px;
     margin-left: 0px !important;
+  }
+  .nav-link-width:active a{
+      color: #fff !important;
   }
   .nav-link-size {
     height: auto;
