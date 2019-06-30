@@ -346,7 +346,7 @@ a {
 }
 .foot-beian {
   color: #fff;
-  padding-bottom: 20px;
+  line-height: 45px;
   text-align: center;
   margin: 0 auto !important;
   display: block;
@@ -410,6 +410,9 @@ width: 16px;
 
 a:active{
     color: #fff !important;
+}
+.hzqy-flex1-minwidth:active {
+    color:#ff650e !important;
 }
 .foot a:hover {
   color: rgba(255, 255, 255, 1);
