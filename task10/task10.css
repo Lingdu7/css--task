@@ -55,6 +55,34 @@ select{
     padding: 5px;
     color: #999;
 }
+input[type="radio"] + label::before {
+    content: "\a0"; /*不换行空格*/
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    width: 1em;
+    height: 1em;
+    margin-right: .4em;
+    border-radius: 50%;
+    border: 1px solid #d5d5d5;
+    background-color: #e8e8e8;
+    text-indent: .15em;
+    line-height: 1; 
+    box-sizing: border-box;
+}
+input[type="radio"]:checked + label::before {
+    background-color: #fff;
+    background-clip: content-box;
+    border: 6px solid #1d7ad9;
+}
+input + label{
+    pointer-events: none;
+}
+
+input[type="radio"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
 .body{
     width: 90%;
     max-width: 1200px;
