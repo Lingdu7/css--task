@@ -393,6 +393,12 @@ justify-content: center;
         line-height: 20px;
     }
 }
+@media(max-width:590.98px){
+  .xiang{
+      display: block !important;
+      line-height: 18px !important;
+  }
+}
 @media(max-width:575.98px){
     
     .step-orange-div{
