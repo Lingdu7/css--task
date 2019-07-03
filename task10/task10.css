@@ -56,7 +56,7 @@ select{
     color: #999;
 }
 input[type="radio"] + label::before {
-    content: "\a0"; /*不换行空格*/
+    content: "\a0"; 
     display: inline-block;
     vertical-align: middle;
     font-size: 16px;
@@ -72,7 +72,6 @@ input[type="radio"] + label::before {
 }
 input[type="radio"]:checked + label::before {
     background-color: #fff;
-    background-clip: content-box;
     border: 6px solid #1d7ad9;
 }
 input + label{
@@ -348,7 +347,7 @@ header .bgc-orange:hover{
     .flex-992{display: flex;}
     .footer-992{
         display: flex;
-        width: 65%;
+        width: 62%;
         justify-content: space-between;
     }
     ul{
