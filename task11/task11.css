@@ -46,9 +46,15 @@ header {
 
 header nav {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 44px;
 }
 
@@ -60,6 +66,8 @@ header nav span {
 }
 
 form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 50px;
@@ -112,3 +120,4 @@ div a {
   margin-right: 5%;
   color: #5fc0cd;
 }
+/*# sourceMappingURL=task11.css.map */

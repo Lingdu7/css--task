@@ -1,144 +1,144 @@
-html,body{
-    max-width: 768px;
-    min-width:320px;
-    width: 100%;
-    margin: 0 auto;
-    font-family: STHeiti;
-    }
-    header{
-        height: 44px;
-        }
-        header > div{
-            height: 44px;
-            width: 100%;
-            max-width: 768px;
-            background-color: #5fc0cd;
-            position: fixed;
-            top:0px;
-             }
-        header > div > a{
-            text-decoration:none;
-            color: #fff;
-            line-height: 44px;
-            font-size: 30px;
-            position: absolute;
-            left: 10px;
-             }
-        header > div > h3{
-            color: #fff;
-            text-align: center;
-            line-height: 44px;
-            margin: 0;
-            }
-    .bgimage{
-         background-image: url(img/task5-11.png);
-         background-size:100% auto;
-         background-repeat: no-repeat;
-         height: 150px;
-         color: #fff;
-         display:flex;
-         align-items:center;
-        } 
-        .bgimage > img{
-            width: 85px;
-            margin-left: 20px;
-            }
-        .bgimage > div{
-            margin-left: 20px;
-            }
-            .bgimage > div > img{   
-                width: 9px;
-                margin-top: 10px; 
-                }
-            .text18{
-                font-size: 20px;
-                }
-            .text14{
-                font-size: 14px;
-                }
-    .data{
-        color: #333;
-    }
-        .data > p{
-            margin-left: 12px;
-            padding-left: 7px;
-            border-left: 2px solid #5fc0cd;
-            
-        }
-        .data > hr{margin: 0;
-            background: #e1e5e7;
-            height: 1px;
-            border: none;
-        }
-        .data > table{
-            width: 100%;
-            padding-left: 15px;
-        }
-        .data td{
-            border-bottom:1px solid #e1e5e7;
-            padding: 16px 0px;
-        }
-        .data span{
-            margin-left: 10px;
-            margin-right: -7px; 
-            color: #999;
-        }
-        .data a{
-            color: #e1e5e7;
-        }
-        .noborder{
-            border:0px;
-        }
-        .colorred >span{
-            color: red ;
-            margin-right: 5px; 
-        }
-        .Lessleft{
-            margin-left: 0px !important;
-        }
-        .colorred2{
-            color: red ;
-        }
-        .tdwidth{
-            width: 74px;
-            
-        }
-    footer{
-        height: 55px;
-    }
-    .footer{
-        position: fixed;
-        bottom:0px;  
-        display:flex;
-        width: 100%;
-        max-width: 768px;
-        height: 44px; 
-        background-color:  white;
-        padding-bottom: 3px;
-    }
-       .button-bule{
-        color: #5fc0cd; 
-        font-size: 20px;
-        margin: 0px 7px 0 19px;
-        border: 1px solid  #5fc0cd;
-        background-color: #fff;
-        height: 44px;
-        line-height: 44px;
-        border-radius:5px;
-        outline: none;
-        flex:1;
-        text-align:center;
-        }
-        .button-white{
-            color: #fff; 
-            font-size: 20px;
-            margin: 0px 19px 0 7px;
-            border: none; 
-            outline: none;
-            background-color: #5fc0cd;
-            height: 44px;
-            line-height: 44px;
-            border-radius:5px;
-            flex:1;
-            text-align:center;
-            }
+html,
+body {
+  max-width: 768px;
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: STHeiti;
+}
+header {
+  height: 44px;
+}
+header > div {
+  height: 44px;
+  width: 100%;
+  max-width: 768px;
+  background-color: #5fc0cd;
+  position: fixed;
+  top: 0px;
+}
+header > div > a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 44px;
+  font-size: 30px;
+  position: absolute;
+  left: 10px;
+}
+header > div > h3 {
+  color: #fff;
+  text-align: center;
+  line-height: 44px;
+  margin: 0;
+}
+.bgimage {
+  background-image: url(img/task5-11.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  height: 150px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.bgimage > img {
+  width: 85px;
+  margin-left: 20px;
+}
+.bgimage > div {
+  margin-left: 20px;
+}
+.bgimage > div > img {
+  width: 9px;
+  margin-top: 10px;
+}
+.text18 {
+  font-size: 20px;
+}
+.text14 {
+  font-size: 14px;
+}
+.data {
+  color: #333;
+}
+.data > p {
+  margin-left: 12px;
+  padding-left: 7px;
+  border-left: 2px solid #5fc0cd;
+}
+.data > hr {
+  margin: 0;
+  background: #e1e5e7;
+  height: 1px;
+  border: none;
+}
+.data > table {
+  width: 100%;
+  padding-left: 15px;
+}
+.data td {
+  border-bottom: 1px solid #e1e5e7;
+  padding: 16px 0px;
+}
+.data span {
+  margin-left: 10px;
+  margin-right: -7px;
+  color: #999;
+}
+.data a {
+  color: #e1e5e7;
+}
+.noborder {
+  border: 0px;
+}
+.colorred > span {
+  color: red;
+  margin-right: 5px;
+}
+.Lessleft {
+  margin-left: 0px !important;
+}
+.colorred2 {
+  color: red;
+}
+.tdwidth {
+  width: 74px;
+}
+footer {
+  height: 55px;
+}
+.footer {
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  width: 100%;
+  max-width: 768px;
+  height: 44px;
+  background-color: white;
+  padding-bottom: 3px;
+}
+.button-bule {
+  color: #5fc0cd;
+  font-size: 20px;
+  margin: 0px 7px 0 19px;
+  border: 1px solid #5fc0cd;
+  background-color: #fff;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 5px;
+  outline: none;
+  flex: 1;
+  text-align: center;
+}
+.button-white {
+  color: #fff;
+  font-size: 20px;
+  margin: 0px 19px 0 7px;
+  border: none;
+  outline: none;
+  background-color: #5fc0cd;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 5px;
+  flex: 1;
+  text-align: center;
+}
