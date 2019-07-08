@@ -1,0 +1,180 @@
+@import "../../css--task/task";
+body {
+  max-width: 768px;
+  width: 100%;
+  margin: 124px auto 95px;
+  font-family: "STHeiti";
+}
+.maincolor{
+  background: $maincolor;
+  min-height: calc(100vh - 219px);
+}
+a {
+  text-decoration: none;
+}
+button{
+  outline: none;
+}
+
+.float-r {
+  float: right;
+  padding-right: 1%;
+}
+header {
+position: fixed;
+top: 0;
+width: 100%;
+max-width: 768px;
+  color: #fff;
+  background-color: $maincolor;
+  nav{
+    @include  ds-flex-xy-mr-center(space-between,center);
+    line-height: 45px;
+    a{
+      color: #fff;
+    }
+    >span:nth-last-child(3) {
+      font-size: 27px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+    >span:nth-last-child(2) {
+      font-size: 20px;
+    }
+    >span:nth-last-child(1) {
+      font-size: 25px;
+      font-weight: 300;
+      cursor: pointer;
+    }
+  }
+  .point{
+    background-color: #b9e9f5;
+
+    position: relative;
+    span:nth-last-child(2){
+      line-height: 41px;
+      color: #464646;
+      padding-left: 5%;
+    }
+    audio{
+      position: absolute;
+      right: -27px;
+      height: 35px;
+      width: 100px;
+      opacity: 0;
+    }
+    span:nth-last-child(1){
+      display: block;
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      float: right;
+      margin-right:5%;
+      margin-top: 3px;
+      line-height: 35px;
+    text-align: center;
+      background-color: #f2a823;
+    }
+  }
+  .triangle{
+    display: block;
+    margin-top: -4px;
+    margin-left: 7%;
+    color: #b9e9f5;
+  }
+  .point2{
+    padding-left:8%;
+    font-size: 12px; 
+  }
+}
+.body {
+  @include width-90;
+  }
+  
+footer{
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 95px;
+  width: 100%;
+  max-width: 768px;
+  padding: 0 10%;
+  background-color:$maincolor;
+  box-sizing: border-box;
+  a{
+    width: 100%;
+  }
+  }
+  button{
+    line-height: 43px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 10px;
+    border:0;
+    cursor: pointer;
+    background-color:#ffc865; 
+    width:100%;
+    &:hover{
+      background-color: #f2a823;
+    }
+  }
+  .bigbox{
+    display:flex;
+    justify-content: space-evenly;
+        flex-wrap: wrap;
+padding: 27px  5px 0;
+background-color: $maincolor;
+.box-box{
+  width: 86px;
+  margin:0 7px 10px 7px ;
+  .box{
+    width: 80px;
+    height: 80px;
+    border: 3px solid #fff;
+    text-align: center;
+.samll-box1{
+  line-height: 60px;
+  background-color: #f5c97b;
+}
+.samll-box2{
+  line-height: 20px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #83b09a;
+}
+  }
+  &:hover .box-hover{
+    opacity: 1;
+  }
+  .box-hover{
+opacity: 0;
+display: flex;
+margin: 5px auto;
+justify-content: space-between;
+height: 20px;
+  }
+}
+}
+.content-icon{
+  height: 19px;
+  width: 19px;
+  display: inline-block;
+  cursor: pointer;
+  background-image: url(img/toupiao.png);
+  background-size: 80px 19px;
+  
+}
+.icon1{
+  background-position: 18px 0;
+}
+.icon2{
+  background-position: 40px 0;
+}
+.icon3{
+  background-position: 59px 0;
+}
+.icon4{
+  background-position: 82px 0;
+}

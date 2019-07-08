@@ -1,0 +1,18 @@
+$maincolor: #69d1e9;
+$minorcolor: #fbb435;
+@mixin ds-flex-xy-mr-center($justify:center,$align:center) {
+    display: flex;
+    justify-content:$justify;
+    align-items: $align;
+}
+@mixin width-90{
+    width: 90%;
+    margin: 0 auto;
+}
+@mixin absolute($direction, $number,$direction2,$number2, $px) {
+    position: absolute;
+    #{$direction}: $number;
+    #{$direction2}: $number2;
+    margin-#{$direction}: $px;
+  }
+
