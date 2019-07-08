@@ -49,16 +49,15 @@ max-width: 768px;
   }
   .point{
     background-color: #b9e9f5;
-
-    position: relative;
     span:nth-last-child(2){
       line-height: 41px;
       color: #464646;
       padding-left: 5%;
     }
     audio{
-      position: absolute;
-      right: -27px;
+      position: relative;;
+      right: 10%;
+      top:-35px;
       height: 35px;
       width: 100px;
       opacity: 0;

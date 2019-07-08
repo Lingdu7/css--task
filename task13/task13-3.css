@@ -61,7 +61,6 @@ header nav > span:nth-last-child(1) {
 
 header .point {
   background-color: #b9e9f5;
-  position: relative;
 }
 
 header .point span:nth-last-child(2) {
@@ -71,8 +70,9 @@ header .point span:nth-last-child(2) {
 }
 
 header .point audio {
-  position: absolute;
-  right: -27px;
+  position: relative;
+  right: 10%;
+  top: -35px;
   height: 35px;
   width: 100px;
   opacity: 0;
