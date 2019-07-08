@@ -144,6 +144,7 @@ button:hover {
 .bigbox {
   display: flex;
   justify-content: space-evenly;
+  align-content: flex-start;
   flex-wrap: wrap;
   padding: 27px  5px 0;
   background-color: #69d1e9;
