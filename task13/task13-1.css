@@ -1,9 +1,18 @@
-html,
-body {
+html {
   max-width: 768px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+body {
+  position: relative;
+  max-width: 768px;
+  width: 100%;
+  height: 100vh;
   margin: 0 auto;
   font-family: "STHeiti";
   background-color: #f0f0f0;
+  overflow: hidden;
 }
 
 a {
@@ -22,33 +31,48 @@ hr {
 }
 
 header {
+  height: 45px;
   color: #fff;
   background-color: #69d1e9;
 }
 
-header nav {
-  padding-left: 5%;
-}
-
-header nav label {
+label {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  color: #fff;
   font-size: 26px !important;
   line-height: 45px;
 }
 
-header nav div > span:nth-last-child(3) {
+.div-label {
+  position: absolute;
+  top: 45px;
+  width: 50%;
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.div-label span:nth-last-child(3) {
   font-size: 20px;
   padding-right: 5px;
 }
 
-header nav div > span:nth-last-child(1) {
+.div-label span:nth-last-child(1) {
   font-size: 18px;
   float: right;
   padding-right: 5%;
 }
 
-header nav hr {
+.div-label hr {
   background-color: #e2eef1;
   margin-left: -5.2%;
+}
+
+input:checked ~ .body {
+  position: absolute;
+  top: 45px;
+  left: 55%;
 }
 
 .body {
@@ -160,9 +184,7 @@ header nav hr {
   cursor: pointer;
   font-size: 18px;
   line-height: 50px;
-  width: 100%;
-  margin-left: -5.2%;
-  padding-left: 5.2%;
+  padding-left: 10%;
   background-color: #f8f8f8;
   color: #69d1e9;
 }

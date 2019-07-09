@@ -18,6 +18,12 @@ button {
   outline: none;
 }
 
+.outer-box {
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+}
+
 .float-r {
   float: right;
   padding-right: 1%;
@@ -143,9 +149,8 @@ button:hover {
 
 .bigbox {
   display: flex;
-  justify-content: space-evenly;
-  align-content: flex-start;
   flex-wrap: wrap;
+  align-content: flex-start;
   padding: 27px  5px 0;
   background-color: #69d1e9;
 }
@@ -209,4 +214,16 @@ button:hover {
 
 .icon4 {
   background-position: 82px 0;
+}
+
+@media (min-width: 578px) {
+  .outer-box {
+    width: 25%;
+  }
+}
+
+@media (min-width: 680px) {
+  .outer-box {
+    width: 20%;
+  }
 }

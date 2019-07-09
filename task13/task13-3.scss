@@ -15,7 +15,11 @@ a {
 button{
   outline: none;
 }
-
+.outer-box{
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+}
 .float-r {
   float: right;
   padding-right: 1%;
@@ -47,6 +51,7 @@ max-width: 768px;
       cursor: pointer;
     }
   }
+ 
   .point{
     background-color: #b9e9f5;
     span:nth-last-child(2){
@@ -121,9 +126,8 @@ footer{
   }
   .bigbox{
     display:flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
     align-content: flex-start;
-        flex-wrap: wrap;
 padding: 27px  5px 0;
 background-color: $maincolor;
 .box-box{
@@ -177,4 +181,15 @@ height: 20px;
 }
 .icon4{
   background-position: 82px 0;
+}
+
+@media(min-width:578px){
+  .outer-box{
+    width: 25%;
+  }
+}
+@media(min-width:680px){
+  .outer-box{
+    width: 20%;
+  }
 }
