@@ -164,7 +164,6 @@ input:checked ~ .body {
 
 .drop + input {
   display: none;
-  z-index: 999;
 }
 
 .drop + input + div {
