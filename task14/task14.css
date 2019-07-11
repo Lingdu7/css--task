@@ -273,7 +273,7 @@ html, body {
   }
   .contain li > div .col-12 {
     flex: none;
-    width: 75%;
+    width: 60%;
   }
   .nav li {
     line-height: 50px;
