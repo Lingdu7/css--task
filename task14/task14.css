@@ -1,3 +1,7 @@
+html, body {
+  background-color: #fafafa;
+}
+
 .main-clr {
   color: #29b078;
 }
@@ -61,7 +65,7 @@
 }
 
 .Learn {
-  border-left: 1px dashed #999;
+  border-left: 1px dashed #d1d1d1;
 }
 
 .xuexi {
@@ -80,6 +84,153 @@
 
 .xuexi-icon1 {
   background-position: -136px 1px;
+}
+
+.youxiu {
+  background-color: #fff;
+  box-shadow: 0 0 3px #dfdfdf;
+  border-radius: 10px;
+}
+
+.youxiu:hover {
+  background-color: #fafafa;
+  box-shadow: 0 0 5px #dfdfdf;
+}
+
+.contain {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.contain label {
+  width: 20px;
+  margin: 0 10px;
+  line-height: 20px;
+  color: #fff;
+  background-color: #999;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 777;
+}
+
+.contain ul {
+  padding: 0;
+  width: 300%;
+  transition: all 0.5s;
+}
+
+.contain li {
+  float: left;
+  width: calc(100%/3);
+}
+
+.label1 {
+  position: absolute;
+  bottom: 10px;
+  left: 45%;
+  margin-left: -10px !important;
+}
+
+.label2 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -10px !important;
+}
+
+.label3 {
+  position: absolute;
+  bottom: 10px;
+  left: 55%;
+  margin-left: -10px !important;
+}
+
+#a:checked ~ ul {
+  margin-left: 0;
+}
+
+#a:checked ~ .label1 {
+  background-color: #29b078;
+}
+
+#b:checked ~ ul {
+  margin-left: -100%;
+}
+
+#b:checked ~ .label2 {
+  background-color: #29b078;
+}
+
+#c:checked ~ ul {
+  margin-left: -200%;
+}
+
+#c:checked ~ .label3 {
+  background-color: #29b078;
+}
+
+.hz {
+  box-shadow: 0 0 3px #dfdfdf;
+}
+
+.hz .hz-logo {
+  min-width: 190px;
+  font-size: 0;
+  line-height: 120px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.hz .hz-logo:hover {
+  box-shadow: 0 0 5px #999;
+  z-index: 777;
+}
+
+.youqing {
+  background-color: #fff;
+}
+
+.youqing li {
+  list-style: outside;
+  margin-left: 50px;
+}
+
+.footer-buttom {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #29b078;
+}
+
+.footer-buttom hr {
+  height: 1px;
+  background-color: #fff;
+  width: 100%;
+}
+
+.footer-buttom .jineng {
+  margin-right: 50px;
+}
+
+.footer-buttom .qixia {
+  max-width: 300px;
+}
+
+.footer-buttom li {
+  margin-right: 20px;
+  line-height: 24px;
+}
+
+.footer-buttom a {
+  color: #fff;
+}
+
+.footer-buttom a:hover {
+  color: #fff;
 }
 
 @media (min-width: 576px) {
@@ -105,6 +256,25 @@
 }
 
 @media (max-width: 575.88px) {
+  .dsp-no-576 {
+    display: none;
+  }
+  .contain ul {
+    padding: 0;
+    width: 100%;
+  }
+  .contain li {
+    float: left;
+    width: 100%;
+  }
+  .contain li > div {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .contain li > div .col-12 {
+    flex: none;
+    width: 75%;
+  }
   .nav li {
     line-height: 50px;
     margin-left: -15px;
@@ -125,7 +295,7 @@
     display: block;
     font-size: 30px;
     color: #fff;
-    line-height: 100px;
+    line-height: 70px;
   }
   .drop + input + ul {
     display: none;
@@ -139,5 +309,8 @@
   }
   .xuexi .pad-r-0 {
     padding-right: 20px;
+  }
+  .Learn {
+    border: 0;
   }
 }

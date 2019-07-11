@@ -2,11 +2,12 @@
 *{
     box-sizing: border-box;
 }
-body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0;}
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,hr,fieldset,legend,input,textarea,select{margin:0;padding:0;}
 body{font:14px "宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
 a{color:#172c45;text-decoration:none;}
 a:hover{color:#cd0200;text-decoration:underline;}
 em{font-style:normal}
+hr,button{border: 0;min-width: 1px;}
 li{list-style:none}
 img{border:0;vertical-align:middle;}
 table{border-collapse:collapse;border-spacing:0;}
@@ -48,13 +49,18 @@ h5{font-size: 18px;font-weight: 500;}
 .row{display: flex;flex-wrap: wrap;margin-left: -15px;margin-right: -15px;}
 .container{width: 100%;padding-right: 15px;padding-left: 15px;margin-right: auto;margin-left: auto;}
 .pad-20{padding: 20px;}
+.pad-10{padding: 10px;}
 .font-16{font-size: 16px;}
 .font-300{font-weight: 300;}
 .font-22{font-size: 22px;}
 .mar-tb-10{margin-top: 10px; margin-bottom: 10px;}
+.mar-tb-20{margin-top: 20px; margin-bottom: 20px;}
 .mar-tb-30{margin-top: 30px; margin-bottom: 30px;}
 .pad-tb-10{padding-top:10px; padding-bottom: 10px;}
 .pad-r-0{padding-right:0;}
+.mar-20{
+    margin: 20px;
+}
 /*媒体查询*/
 @media(max-width:575.88px){
     .col-12 {width: 100%;}
