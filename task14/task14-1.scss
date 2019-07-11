@@ -48,7 +48,115 @@ background-position: 0 1px;
     .drop + input {
       display: none;
     }
+    //banner
+    .banner{
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        span{
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            line-height: 15px;
+            margin-left: 15px;
+            margin-right: 15px;
+            border-radius: 100%;
+            background-color: #fff;
+        }
+        .ba-box{
+            width: calc(100% * 4);
+            font-size: 0;
+            animation:banner 6s ease 1s infinite ;
+	-moz-animation:banner 6s ease  1s infinite ;
+	-webkit-animation:banner 6s ease  1s infinite ;
+            img{
+                width: calc(100% / 4);
+            }
+        }
+        .ba-icon{
+            position: absolute;
+            bottom: 37px;
+            left: 50%;
+            line-height: 0;
+            margin-left: -71px;
+        }
+        .main-icon{
+            position: absolute;
+            bottom: 37px;
+            left: 50%;
+            line-height: 0;
+            margin-left: -55px;
+            background-color:$maincolor;
+            animation:icon 6s ease  infinite ;
+	-moz-animation:icon 6s  ease  infinite ;
+	-webkit-animation:icon 6s ease   infinite ;
+
+        }
+    }
+    @keyframes banner{ 
+        0% {
+            margin-left: 0;
+        }
+        
+        10% {
+            margin-left: 0;
+        }
+        33% {
+            margin-left: -100%;
+        }
+        43% {
+            margin-left: -100%;
+        }
+        66% {
+            margin-left: -200%;
+        }
+        76% {
+            margin-left: -200%;
+        }
+        100% {
+            margin-left: -300%;}
+    }
+    @keyframes icon{ 
+        0%, 27% {
+        margin-left: -56px;
+        opacity: 1; }
+        28.1%,30%{
+            margin-left: -56px;
+            opacity: 0; 
+        }
+        30.1%,30.2%{
+            margin-left: -8px;
+        }
+      36.3%,59%{
+        margin-left: -8px;
+        opacity: 1;
+      }
+
+        59.1%,59.2%{
+            opacity: 0; 
+        }
+        62.3%,64.3%{
+            margin-left: 40px;
+        }
+        70.6%,90%{
+
+            margin-left: 40px;
+            opacity: 1;
+        }
+        90.1%,91%{
+            margin-left: 40px;
+            opacity: 0; 
+    }
+    94%,96%{
+        opacity: 0; 
+        margin-left: 0px;
+    }
+    
+    }
   //优势
+  .bg-gray-hover:hover{
+      background-color: #f1f1f1;
+  }
   .learn-icon1{
     background-position: -112px 1px;
     width: 20px;
@@ -57,7 +165,11 @@ background-position: 0 1px;
     border-left: 1px dashed #d1d1d1;
 }
 //学习
-.xuexi{margin-left: -15px}
+.xuexi{margin-left: -15px;margin-bottom: 30px;
+&>div:hover{
+    &>.no{box-shadow: 0 0 7px #666;}
+&>.clr-999{color: #333;}
+}}
  .no{
           width: 70px;
           height: 70px;
@@ -86,41 +198,44 @@ background-position: 0 1px;
     margin: 0 auto;
     width: 100%;
     text-align: center;
-    color: #fff;
     overflow: hidden;
-    label {width: 20px;
-        margin: 0 10px;
-        line-height: 20px;
-        color: #fff;
-        background-color:#999;
+    label {width: 10px;
+        height: 10px;
+        background-color:#d8d8d8;
         border-radius: 100%;
         cursor: pointer;
-        z-index: 777;}}
+        z-index: 777;
+    &:hover{
+        background-color: #fff;
+        border: 1px solid $maincolor;
+    }
+    }}
 
 
 .contain ul {padding: 0;
     width: 300%;
     transition: all 0.5s;}
 .contain li {float: left;
-   width: calc(100%/3;}
+   width: calc(100%/3)}
 .label1 {position: absolute;
     bottom: 10px;
-    left: 45%;
-    margin-left: -10px !important;}
+    left: 48%;
+    margin-left: -15px !important;}
 .label2 { position: absolute;
     bottom: 10px;
     left: 50%;
-    margin-left: -10px !important;}
+    margin-left: -7px !important;}
 .label3 { position: absolute;
     bottom: 10px;
-    left: 55%;
-    margin-left: -10px !important; }
+    left: 52%;
+    margin-right: -15px !important; }
 #a:checked~ul {margin-left: 0;}
 #a:checked~.label1 {background-color:$maincolor;}
 #b:checked~ul {margin-left: -100%;}
 #b:checked~.label2 {background-color: $maincolor;}
 #c:checked~ul {margin-left: -200%}
 #c:checked~.label3 {background-color: $maincolor}
+
 //合作
 .hz{
     box-shadow: 0 0 3px #dfdfdf;
@@ -139,7 +254,18 @@ background-position: 0 1px;
 //友情
 .youqing{
     background-color: #fff;
-    li{list-style: outside;margin-left: 50px;}
+   a{
+       display: inline-block;
+       width: 10%;
+       text-align: center;
+       font-size: 13px;
+       color: #999;
+       font-weight: 300;
+       line-height: 26px;
+       &:hover{
+           color: #333;
+       }
+   }
 }
 // 底部
 .footer-buttom{
@@ -179,6 +305,10 @@ a{
     }
  }
  @media(max-width:991.88px){
+    .youqing{
+        .container{
+            padding: 0;
+        }}
     .xuexi{
         .two{
             padding-right: 20px;
@@ -189,11 +319,40 @@ a{
     }
  }
   @media(max-width:767.88px){
+    .ba-icon,.main-icon{
+        display: none !important;
+    }
+    
+    .nav{
+        li{
+            line-height: 80px;
+        }
+    }
     .nav-img{
         width: 250px;
     } 
-  }
+    .youqing{
+        .container{
+            padding: 0 15px;
+       
+       a{
+           width: 20%;
+  } }}
+}
   @media(max-width:575.88px){
+      .footer-buttom{
+          font-size: 12px;
+      }
+    .youqing{
+        .container{
+        a{
+            width: 25%;
+   }}}
+      .flex-fdc-aic-576{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
     .dsp-no-576{
         display: none;
     }
@@ -208,6 +367,8 @@ a{
             .col-12{
                 flex: none;
     width: 60%;
+    margin-top:3px;
+    margin-bottom: 3px; 
     padding: 0 10px;
             }
         }
@@ -235,7 +396,7 @@ a{
         display: block;
         font-size: 30px;
         color: #fff;
-        line-height: 70px;
+        line-height: 60px;
       }
    
       .drop + input + ul {

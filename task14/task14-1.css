@@ -59,6 +59,119 @@ html, body {
   display: none;
 }
 
+.banner {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+.banner .ba-box {
+  width: calc(100% * 4);
+  font-size: 0;
+  animation: banner 6s ease 1s infinite;
+  -moz-animation: banner 6s ease  1s infinite;
+  -webkit-animation: banner 6s ease  1s infinite;
+}
+
+.banner .ba-box img {
+  width: calc(100% / 4);
+}
+
+.banner .ba-icon {
+  position: absolute;
+  bottom: 37px;
+  left: 50%;
+  line-height: 0;
+  margin-left: -71px;
+}
+
+.banner .main-icon {
+  position: absolute;
+  bottom: 37px;
+  left: 50%;
+  line-height: 0;
+  margin-left: -55px;
+  background-color: #29b078;
+  animation: icon 6s ease  infinite;
+  -moz-animation: icon 6s  ease  infinite;
+  -webkit-animation: icon 6s ease   infinite;
+}
+
+@keyframes banner {
+  0% {
+    margin-left: 0;
+  }
+  10% {
+    margin-left: 0;
+  }
+  33% {
+    margin-left: -100%;
+  }
+  43% {
+    margin-left: -100%;
+  }
+  66% {
+    margin-left: -200%;
+  }
+  76% {
+    margin-left: -200%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+
+@keyframes icon {
+  0%, 27% {
+    margin-left: -56px;
+    opacity: 1;
+  }
+  28.1%, 30% {
+    margin-left: -56px;
+    opacity: 0;
+  }
+  30.1%, 30.2% {
+    margin-left: -8px;
+  }
+  36.3%, 59% {
+    margin-left: -8px;
+    opacity: 1;
+  }
+  59.1%, 59.2% {
+    opacity: 0;
+  }
+  62.3%, 64.3% {
+    margin-left: 40px;
+  }
+  70.6%, 90% {
+    margin-left: 40px;
+    opacity: 1;
+  }
+  90.1%, 91% {
+    margin-left: 40px;
+    opacity: 0;
+  }
+  94%, 96% {
+    opacity: 0;
+    margin-left: 0px;
+  }
+}
+
+.bg-gray-hover:hover {
+  background-color: #f1f1f1;
+}
+
 .learn-icon1 {
   background-position: -112px 1px;
   width: 20px;
@@ -70,6 +183,15 @@ html, body {
 
 .xuexi {
   margin-left: -15px;
+  margin-bottom: 30px;
+}
+
+.xuexi > div:hover > .no {
+  box-shadow: 0 0 7px #666;
+}
+
+.xuexi > div:hover > .clr-999 {
+  color: #333;
 }
 
 .no {
@@ -102,19 +224,21 @@ html, body {
   margin: 0 auto;
   width: 100%;
   text-align: center;
-  color: #fff;
   overflow: hidden;
 }
 
 .contain label {
-  width: 20px;
-  margin: 0 10px;
-  line-height: 20px;
-  color: #fff;
-  background-color: #999;
+  width: 10px;
+  height: 10px;
+  background-color: #d8d8d8;
   border-radius: 100%;
   cursor: pointer;
   z-index: 777;
+}
+
+.contain label:hover {
+  background-color: #fff;
+  border: 1px solid #29b078;
 }
 
 .contain ul {
@@ -131,22 +255,22 @@ html, body {
 .label1 {
   position: absolute;
   bottom: 10px;
-  left: 45%;
-  margin-left: -10px !important;
+  left: 48%;
+  margin-left: -15px !important;
 }
 
 .label2 {
   position: absolute;
   bottom: 10px;
   left: 50%;
-  margin-left: -10px !important;
+  margin-left: -7px !important;
 }
 
 .label3 {
   position: absolute;
   bottom: 10px;
-  left: 55%;
-  margin-left: -10px !important;
+  left: 52%;
+  margin-right: -15px !important;
 }
 
 #a:checked ~ ul {
@@ -194,9 +318,18 @@ html, body {
   background-color: #fff;
 }
 
-.youqing li {
-  list-style: outside;
-  margin-left: 50px;
+.youqing a {
+  display: inline-block;
+  width: 10%;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  font-weight: 300;
+  line-height: 26px;
+}
+
+.youqing a:hover {
+  color: #333;
 }
 
 .footer-buttom {
@@ -241,6 +374,9 @@ html, body {
 }
 
 @media (max-width: 991.88px) {
+  .youqing .container {
+    padding: 0;
+  }
   .xuexi .two {
     padding-right: 20px;
   }
@@ -250,12 +386,35 @@ html, body {
 }
 
 @media (max-width: 767.88px) {
+  .ba-icon, .main-icon {
+    display: none !important;
+  }
+  .nav li {
+    line-height: 80px;
+  }
   .nav-img {
     width: 250px;
+  }
+  .youqing .container {
+    padding: 0 15px;
+  }
+  .youqing .container a {
+    width: 20%;
   }
 }
 
 @media (max-width: 575.88px) {
+  .footer-buttom {
+    font-size: 12px;
+  }
+  .youqing .container a {
+    width: 25%;
+  }
+  .flex-fdc-aic-576 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .dsp-no-576 {
     display: none;
   }
@@ -274,6 +433,8 @@ html, body {
   .contain li > div .col-12 {
     flex: none;
     width: 60%;
+    margin-top: 3px;
+    margin-bottom: 3px;
     padding: 0 10px;
   }
   .nav li {
@@ -296,7 +457,7 @@ html, body {
     display: block;
     font-size: 30px;
     color: #fff;
-    line-height: 70px;
+    line-height: 60px;
   }
   .drop + input + ul {
     display: none;
