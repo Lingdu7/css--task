@@ -68,22 +68,58 @@ color: $maincolor;
      h4{
          font-size: 22px;
      }
- }
+     .label1,.label2,.label3,.label4 {width: 20px;
+        height: 20px;
+        display: inline-block;
+        margin-right: 8px;
+        background-color:#ffffff;
+        border: 1px solid $maincolor;
+        border-radius: 100%;
+        cursor: pointer;
+        z-index: 777;}
+        .content1,.content2{
+            display: none;
+        }
+#a:checked~ .qiye>ul>.li1{
+    color: #ff5c00;
+    .label1{background-color:#ff5c00;border: 0;}
+   }
+
+#b:checked~.qiye>ul>.li2{
+    color: #ff5c00;
+    .label2{background-color:#ff5c00;border: 0;}
+}
+#c:checked~.qiye>ul>.li3{
+    color: #ff5c00;
+    .label3{background-color:#ff5c00;border: 0;}
+}
+#d:checked~.qiye>ul>.li4{
+    color: #ff5c00;
+    .label4{background-color:#ff5c00;border: 0;}
+}
+#a:checked~ .jieshao>.content1{
+   display: block;
+   }
+
+#b:checked~.jieshao>.content2,#c:checked~.jieshao>.content2,#d:checked~.jieshao>.content2{
+    display: block;
+}
  .qiye{
      background-color: #fff;
      box-shadow: 0 0 3px #c5c5c5;
     
-    ul{
-        margin-left:60px;
-    } li{
+    ul{ margin-left:60px; } 
+    li{
+        display: flex;
+        align-items: center;
         color: $maincolor; 
         line-height: 45px;
         font-size: 18px;
         &:hover{
             color: #ff5c00;
-            span{
-                color: #ff5c00;
-                -webkit-text-stroke: 0;
+           label{
+                background-color: #ff5c00;
+                border: 0;
             }
         }
         span{
@@ -107,7 +143,7 @@ color: $maincolor;
         color: #666;
     }
 }
-
+}
 // 底部
 .footer-buttom{
     display: flex;
@@ -135,6 +171,12 @@ a{
 }
 }
   //媒体查询
+  @media(min-width:1200px){
+    .qiye{
+       
+       
+       ul{ margin-left:90px !important; } }
+  }
  @media(min-width:576px){
     .nav{
         li{
@@ -146,8 +188,10 @@ a{
     }
  }
  @media(max-width:991.88px){
-  
- }
+   .qyjs{ .qiye{
+        ul{
+            margin-left:30px;
+ }}}}
  
   @media(max-width:767.88px){
     .qiye{
@@ -162,7 +206,7 @@ a{
         }}
         .jieshao{
             margin-top: 30px;
-            padding: 0;
+            padding: 0 !important;
         }
     .nav{
         li{
@@ -178,6 +222,7 @@ a{
           font-size: 12px;
       }
       .jieshao{
+        
         .dsp-f{
            flex-direction: column; 
         }

@@ -84,47 +84,109 @@ html, body {
   font-size: 22px;
 }
 
-.qiye {
+.qyjs .label1, .qyjs .label2, .qyjs .label3, .qyjs .label4 {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 8px;
+  background-color: #ffffff;
+  border: 1px solid #29b078;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 777;
+}
+
+.qyjs .content1, .qyjs .content2 {
+  display: none;
+}
+
+.qyjs #a:checked ~ .qiye > ul > .li1 {
+  color: #ff5c00;
+}
+
+.qyjs #a:checked ~ .qiye > ul > .li1 .label1 {
+  background-color: #ff5c00;
+  border: 0;
+}
+
+.qyjs #b:checked ~ .qiye > ul > .li2 {
+  color: #ff5c00;
+}
+
+.qyjs #b:checked ~ .qiye > ul > .li2 .label2 {
+  background-color: #ff5c00;
+  border: 0;
+}
+
+.qyjs #c:checked ~ .qiye > ul > .li3 {
+  color: #ff5c00;
+}
+
+.qyjs #c:checked ~ .qiye > ul > .li3 .label3 {
+  background-color: #ff5c00;
+  border: 0;
+}
+
+.qyjs #d:checked ~ .qiye > ul > .li4 {
+  color: #ff5c00;
+}
+
+.qyjs #d:checked ~ .qiye > ul > .li4 .label4 {
+  background-color: #ff5c00;
+  border: 0;
+}
+
+.qyjs #a:checked ~ .jieshao > .content1 {
+  display: block;
+}
+
+.qyjs #b:checked ~ .jieshao > .content2, .qyjs #c:checked ~ .jieshao > .content2, .qyjs #d:checked ~ .jieshao > .content2 {
+  display: block;
+}
+
+.qyjs .qiye {
   background-color: #fff;
   box-shadow: 0 0 3px #c5c5c5;
 }
 
-.qiye ul {
+.qyjs .qiye ul {
   margin-left: 60px;
 }
 
-.qiye li {
+.qyjs .qiye li {
+  display: flex;
+  align-items: center;
   color: #29b078;
   line-height: 45px;
   font-size: 18px;
 }
 
-.qiye li:hover {
+.qyjs .qiye li:hover {
   color: #ff5c00;
 }
 
-.qiye li:hover span {
-  color: #ff5c00;
-  -webkit-text-stroke: 0;
+.qyjs .qiye li:hover label {
+  background-color: #ff5c00;
+  border: 0;
 }
 
-.qiye li span {
+.qyjs .qiye li span {
   color: #fff;
   -webkit-text-stroke: 1px #29b078;
   margin-right: 5px;
 }
 
-.jieshao {
+.qyjs .jieshao {
   padding-left: 30px;
 }
 
-.jieshao > div {
+.qyjs .jieshao > div {
   background-color: #fff;
   box-shadow: 0 0 3px #c5c5c5;
   min-height: 500px;
 }
 
-.jieshao .content {
+.qyjs .jieshao .content {
   white-space: pre-line;
   line-height: 26px;
   color: #666;
@@ -164,10 +226,22 @@ html, body {
   color: #fff;
 }
 
+@media (min-width: 1200px) {
+  .qiye ul {
+    margin-left: 90px !important;
+  }
+}
+
 @media (min-width: 576px) {
   .nav li:hover {
     padding-bottom: 0;
     border-bottom: 4px solid;
+  }
+}
+
+@media (max-width: 991.88px) {
+  .qyjs .qiye ul {
+    margin-left: 30px;
   }
 }
 
@@ -184,7 +258,7 @@ html, body {
   }
   .jieshao {
     margin-top: 30px;
-    padding: 0;
+    padding: 0 !important;
   }
   .nav li {
     line-height: 80px;
