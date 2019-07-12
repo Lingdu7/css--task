@@ -9,6 +9,10 @@ html,body{background-color: #fafafa;}
 .main-bg{
     background-color: $maincolor;
 }
+.li-hover{
+        padding-bottom:0 !important;
+        border-bottom:4px solid;  
+    }
 hr{
     height: 1px;
     background-color: #e0e0e0;
@@ -41,6 +45,12 @@ background-position: 0 1px;
     li{
     line-height: 92px;
     padding: 4px 0;
+    }
+    a{
+        color: #fff;
+        &:hover{
+            text-decoration: none;
+        }
     }
 }
 .nav-img{
@@ -198,6 +208,15 @@ a{
         }
     }
     .nav{ 
+        .li-hover{
+            line-height: 50px;
+            margin-left: -15px;
+            margin-right: -15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border: 0;
+            background-color: #258d61
+        }
     li{
         line-height: 50px;
         margin-left: -15px;

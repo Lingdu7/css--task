@@ -46,6 +46,14 @@ html, body {
   padding: 4px 0;
 }
 
+.nav a {
+  color: #fff;
+}
+
+.nav a:hover {
+  text-decoration: none;
+}
+
 .nav-img {
   width: 300px;
   height: auto;
