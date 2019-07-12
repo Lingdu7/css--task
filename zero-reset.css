@@ -41,6 +41,7 @@ h5{font-size: 18px;font-weight: 500;}
 .po-r{position: relative;}
 .po-a{position: absolute;}
 .txt-c{text-align: center;}
+.txt-j{text-align:justify;}
 .bg-fff{background-color: #fff;}
 .clr-fff{color: #fff;}
 .clr-333{color: #333;}
@@ -50,20 +51,28 @@ h5{font-size: 18px;font-weight: 500;}
 .container{width: 100%;padding-right: 15px;padding-left: 15px;margin-right: auto;margin-left: auto;}
 .pad-20{padding: 20px;}
 .pad-10{padding: 10px;}
+.font-12{font-size: 12px}
 .font-16{font-size: 16px;}
+.font-18{font-size: 18px;}
 .font-300{font-weight: 300;}
 .font-22{font-size: 22px;}
+.line-h30{line-height: 30px;}
 .mar-tb-10{margin-top: 10px; margin-bottom: 10px;}
 .mar-tb-20{margin-top: 20px; margin-bottom: 20px;}
 .mar-tb-30{margin-top: 30px; margin-bottom: 30px;}
 .pad-tb-10{padding-top:10px; padding-bottom: 10px;}
 .pad-tb-20{padding-top:20px; padding-bottom: 20px;}
 .pad-r-0{padding-right:0;}
+.pad-l-10{padding-left: 10px;}
+.pad-lf-10{padding-left:10px;padding-right: 10px; }
 .mar-20{
     margin: 20px;
 }
 .mar-10{
     margin: 10px;
+}
+.word-break{
+    word-break: break-all;
 }
 /*媒体查询*/
 @media(max-width:575.88px){

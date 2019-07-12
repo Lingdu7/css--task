@@ -1,12 +1,18 @@
 $maincolor:#29b078;
 html,body{background-color: #fafafa;}
+.clr-o{
+    color: #ff5c00;
+}
 .main-clr{
     color: $maincolor;
 }
 .main-bg{
     background-color: $maincolor;
 }
-
+hr{
+    height: 1px;
+    background-color: #e0e0e0;
+}
 //导航
 .nva-top-txt{
     font-size: 14px;
@@ -48,7 +54,74 @@ background-position: 0 1px;
     .drop + input {
       display: none;
     }
- 
+  //面包
+  .mianbao{
+    padding: 20px 0;
+    a:hover{
+color: $maincolor;
+    }
+    span{
+        margin: 0 10px;
+    }
+}
+.daohang{
+    margin: 10px 0;
+    .zyno{
+        margin-bottom: 50px;
+        display: none;
+    }
+    label{
+        display: inline-block;
+        line-height: 30px;
+        margin: 0 5px;
+        padding: 2px 5px;
+        text-align: center;
+&:hover{
+    color:#fff;
+    background-color:  $maincolor;
+        }
+    }}
+
+.bor-r1-e0{
+    border-right: 1px solid #e0e0e0;
+}
+.line-h30{
+    line-height: 30px;
+}
+.table-box{
+    position: relative;
+    box-shadow: 0 0 3px #adadad;
+    overflow: hidden;
+    &:hover{
+        .hover{
+            left: 0;
+            transition: left .3s linear 0s;
+        }
+    }
+    .hover{
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0 ,.7);
+        position: absolute;
+        top: 0;
+        left: -100%;
+    }
+    div{
+        min-height: 30px;
+    }
+}
+#aa:checked~.zyno {display: block;}
+#aa:checked~.label1 {background-color:$maincolor; color: #fff;}
+#bb:checked~.qianduan {display: block;}
+#bb:checked~.label2 {background-color:$maincolor; color: #fff;}
+#cc:checked~.houduan{display: block;}
+#cc:checked~.label3{background-color:$maincolor; color: #fff;}
+#dd:checked~.yidong {display: block;}
+#dd:checked~.label4 {background-color:$maincolor; color: #fff;}
+#ee:checked~.zhengzhan {display: block;}
+#ee:checked~.label5 {background-color:$maincolor; color: #fff;}
+#ff:checked~.yunying{display: block;}
+#ff:checked~.label6{background-color:$maincolor; color: #fff;}
 // 底部
 .footer-buttom{
     display: flex;
@@ -85,12 +158,22 @@ a{
         }
         }
     }
+
  }
  @media(max-width:991.88px){
+    .table-box{
+        img{
+            width: 120px;
+        }
+    }
  }
  
   @media(max-width:767.88px){
-  
+    .table-box{
+        img{
+            width: 110px;
+        }
+    }
     .nav{
         li{
             line-height: 80px;
@@ -104,7 +187,16 @@ a{
       .footer-buttom{
           font-size: 12px;
       }
-    
+      .spanfww{
+          display: block;
+          width: 100%;
+          margin: 5px;
+      }
+      .table-box{
+        img{
+            width: 90px;
+        }
+    }
     .nav{ 
     li{
         line-height: 50px;
