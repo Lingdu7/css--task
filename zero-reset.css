@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,hr,fieldset,legend,input,textarea,select{margin:0;padding:0;}
-body{font:14px "宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+body{font:14px "Microsoft YaHei","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
 a{color:#172c45;text-decoration:none;}
 a:hover{color:#cd0200;text-decoration:underline;}
 em{font-style:normal}

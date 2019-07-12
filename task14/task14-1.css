@@ -140,39 +140,51 @@ html, body {
   }
 }
 
-@keyframes icon {
-  0%, 27% {
-    margin-left: -56px;
-    opacity: 1;
+.baone {
+  animation: baone 6s  infinite;
+  background-color: #29b078;
+  border: 1px solid #29b078;
+}
+
+.batwo {
+  animation: batwo 6s 2s infinite;
+  background-color: #ffffff;
+  border: 1px solid #29b078;
+}
+
+.bathree {
+  animation: bathree 6s 2s infinite;
+  background-color: #ffffff;
+  border: 1px solid #29b078;
+}
+
+@keyframes baone {
+  40%, 50%, 60%, 70%, 80%, 90% {
+    background-color: #ffffff;
+    border: 1px solid #29b078;
   }
-  28.1%, 30% {
-    margin-left: -56px;
-    opacity: 0;
+  0%, 30%, 100% {
+    background-color: #29b078;
   }
-  30.1%, 30.2% {
-    margin-left: -8px;
+}
+
+@keyframes batwo {
+  0%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
+    background-color: #ffffff;
+    border: 1px solid #29b078;
   }
-  36.3%, 59% {
-    margin-left: -8px;
-    opacity: 1;
+  10%, 30% {
+    background-color: #29b078;
   }
-  59.1%, 59.2% {
-    opacity: 0;
+}
+
+@keyframes bathree {
+  0%, 10%, 20%, 30%, 70%, 80%, 90%, 100% {
+    background-color: #ffffff;
+    border: 1px solid #29b078;
   }
-  62.3%, 64.3% {
-    margin-left: 40px;
-  }
-  70.6%, 90% {
-    margin-left: 40px;
-    opacity: 1;
-  }
-  90.1%, 91% {
-    margin-left: 40px;
-    opacity: 0;
-  }
-  94%, 96% {
-    opacity: 0;
-    margin-left: 0px;
+  40%, 60% {
+    background-color: #29b078;
   }
 }
 
@@ -303,6 +315,10 @@ html, body {
 
 #c:checked ~ .label3 {
   background-color: #29b078;
+}
+
+.hezuo {
+  margin-bottom: 30px;
 }
 
 .hz {
