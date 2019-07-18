@@ -46,7 +46,7 @@ function eee() {
     y[reult[0]].style.backgroundColor = colors[0];
     y[reult[1]].style.backgroundColor = colors[1];
     y[reult[2]].style.backgroundColor = colors[2];
-    set = setTimeout("stop(),eee()", 1000);
+    set = setTimeout("stop(),eee()", 666);
 }
 
 function stop() {
