@@ -1,51 +1,57 @@
-function eee(){
-   var colors=[];
-  
-   for(i=0;i<3;i++){
-       var r=Math.floor(Math.random()*256);
-       var g=Math.floor(Math.random()*256);
-       var b=Math.floor(Math.random()*256);
-       var ccc="rgb("+r+","+g+","+b+")";
-       colors[i]=ccc;
-   }
-   reult=[];
-   reult[0]=Math.floor(Math.random()* 10);
-   reult[1]=Math.floor(Math.random() * 10);
-   reult[2]=Math.floor(Math.random() * 10);
-   console.log("a"+ reult[0]);
-    console.log("b"+ reult[1]);
-    console.log("c"+ reult[2]);
-if( reult[0]== reult[1]|| reult[0]== reult[2]|| reult[1]== reult[2]){
-   for(i=0; i<1; i++){
- reult[0]=Math.floor(Math.random()* 10);
-    reult[1]=Math.floor(Math.random() * 10);
-    reult[2]=Math.floor(Math.random() * 10);
-    console.log("aa"+ reult[0]);
-    console.log("bb"+ reult[1]);
-    console.log("cc"+ reult[2]);
-   if( reult[0]== reult[1]|| reult[0]== reult[2]|| reult[1]== reult[2]){
-      i--; 
-   }
-   else{
-    break;
-   }
-}
+var reult = [0];
+function eee() {
+    //生成随机颜色
+    var colors = [];
+    for (var i = 0; i < 3; i++) {
+        var color = "#"
+        for (var j = 0; j < 3; j++) {
+            var r = Math.floor(Math.random() * 256);
+            if (r < 16) {
+                color += "0";
+                color += r.toString(16);
+            }
+            else {
+                color += r.toString(16);
+            }
+        }
+        console.log(color)
+        colors[i] = color;
+                   //去重
+                   if (i > 0) {
+                    for (var t = 0; t < colors.length; t++) {
+                        console.log(t)
+                        if (colors[i] != colors[t]) {
+                            break;
+                        }
+                        else {
+                            i--;
+                        }
+                    }
+                }
+    }
+    //生成数组
+    var arr = [];
+    for (var i = 0; i <= 8; i++) {
+        arr[i] = i;
+    }
+    //随机选择数
+    reult = [];
+    for (var i = 0; i < 3; i++) {
+        var ran = Math.floor(Math.random() * (arr.length - i));
+        reult.push(arr[ran]);
+        arr[ran] = arr[arr.length - i - 1];
+    }
+    x = document.getElementById("main");
+    y = x.getElementsByTagName("div");
+    y[reult[0]].style.backgroundColor = colors[0];
+    y[reult[1]].style.backgroundColor = colors[1];
+    y[reult[2]].style.backgroundColor = colors[2];
+    set = setTimeout("stop(),eee()", 1000);
 }
 
-    x=document.getElementById("main");
-    y=x.getElementsByTagName("div"); 
-   
-   y[reult[0]].style.backgroundColor=colors[0];
-   y[reult[1]].style.backgroundColor=colors[1];
-   y[reult[2]].style.backgroundColor=colors[2];
-   
-   setTimeout("stop(),eee()",100); 
-   
-   }
-   
-   function stop()
-   {
-       y[reult[0]].removeAttribute("style");
-       y[reult[1]].removeAttribute("style");
-       y[reult[2]].removeAttribute("style");
-   }
+function stop() {
+    clearInterval(set);
+    y[reult[0]].removeAttribute("style");
+    y[reult[1]].removeAttribute("style");
+    y[reult[2]].removeAttribute("style");
+}
