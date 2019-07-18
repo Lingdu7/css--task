@@ -16,7 +16,7 @@ function eee() {
         }
         console.log(color)
         colors[i] = color;
-                   //去重
+                   //查重
                    if (i > 0) {
                     for (var t = 0; t < colors.length; t++) {
                         console.log(t)
