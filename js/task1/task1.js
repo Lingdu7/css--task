@@ -47,6 +47,9 @@ function eee() {
     y[reult[1]].style.backgroundColor = colors[1];
     y[reult[2]].style.backgroundColor = colors[2];
     set = setTimeout("stop(),eee()", 666);
+    document.getElementById("top").style.backgroundColor="orange"
+    document.getElementById("top").style.color="#fff"
+    document.getElementById("buttom").removeAttribute("style");
 }
 
 function stop() {
@@ -54,4 +57,7 @@ function stop() {
     y[reult[0]].removeAttribute("style");
     y[reult[1]].removeAttribute("style");
     y[reult[2]].removeAttribute("style");
+    document.getElementById("top").removeAttribute("style");
+    document.getElementById("buttom").style.backgroundColor="orange"
+    document.getElementById("buttom").style.color="#fff"
 }
