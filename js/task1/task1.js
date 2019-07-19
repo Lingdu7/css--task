@@ -52,7 +52,6 @@ function move() {//开始
 set=window.setInterval(function(){noclick=true;move();},500); 
 checked("buttom","top");
 noclick=false;
-console.log(noclick);
 }
 }
 function stop() {//停止
