@@ -16,7 +16,7 @@ function colorss(value) {//生成随机颜色
     colors[i] = color
  
     if (i > 0) { //颜色查重
-       for (var t = 0; t < i-1; t++) {
+       for (var t = 0; t <= i-1; t++) {
           if (colors[i] != colors[t]) {//没有重复就退出
 			continue;
           }
