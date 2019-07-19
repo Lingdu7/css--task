@@ -16,11 +16,11 @@ function colorss(value) {//生成随机颜色
     colors[i] = color
  
     if (i > 0) { //颜色查重
-       for (var t = 0; t < colors.length; t++) {
+       for (var t = 0; t < colors.length-1; t++) {
           if (colors[i] != colors[t]) {//没有重复就退出
 			continue;
           }
-          else {
+          else if(colors[i] == colors[t]) {
                  i--;//有重复就再生成一次
           }
         }
