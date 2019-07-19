@@ -3,8 +3,8 @@ var colors = [];//颜色数组
 var set;//定时器
 var main_div;//盒子
 var noclick=true;//防止重复点击
-function colorss() {//生成随机颜色
-   for (var i = 0; i < 3; i++) {//生成三种随机色
+function colorss(value) {//生成随机颜色
+   for (var i = 0; i < value; i++) {//生成三种随机色
     var color = "#";
     for (var j = 0; j < 3; j++) {//生成rgb随机色
         var r = Math.floor(Math.random() * 256);
@@ -18,7 +18,7 @@ function colorss() {//生成随机颜色
     if (i > 0) { //颜色查重
        for (var t = 0; t < colors.length; t++) {
           if (colors[i] != colors[t]) {//没有重复就退出
-             break;
+			continue;
           }
           else {
                  i--;//有重复就再生成一次
@@ -27,25 +27,25 @@ function colorss() {//生成随机颜色
     }
 }
 }
-function num(bag,samll ) {//生成数组
+function num(most,few ) {//生成数组
  var arr = [];
- for (var i = 0; i <= bag; i++) {
+ for (var i = 0; i < most; i++) {
     arr[i] = i;//存入数组
  }
- for (var i = 0; i < samll; i++) {
+ for (var i = 0; i < few; i++) {
     var ran = Math.floor(Math.random() * (arr.length - i));//生成随机数
     reult[i]=arr[ran];//往随机数组里边存入随机选中的数
     arr[ran] = arr[arr.length - i - 1];//数组内容替换
   }
 }
-function checked(top,buttom){//选择改色
-    document.getElementById(top).removeAttribute("style");
-    document.getElementById(buttom).style.backgroundColor = "orange";
-    document.getElementById(buttom).style.color = "#fff";
+function checked(not,yes){//选择改色
+    document.getElementById(not).removeAttribute("style");
+    document.getElementById(yes).style.backgroundColor = "orange";
+    document.getElementById(yes).style.color = "#fff";
 }
 function move() {//开始
    if(noclick){
- colorss();num("8","3");stop();
+ colorss(3);num("9","3");stop();
  for(var i=0;i<reult.length;i++){
    main_div[reult[i]].style.backgroundColor = colors[i];//循环赋色
   }
