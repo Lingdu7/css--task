@@ -17,11 +17,8 @@ function colorss(value) {//生成随机颜色
  
     if (i > 0) { //颜色查重
        for (var t = 0; t <= i-1; t++) {
-          if (colors[i] != colors[t]) {//没有重复就退出
-			continue;
-          }
-          else if(colors[i] == colors[t]) {
-                 i--;//有重复就再生成一次
+ if(colors[i] == colors[t]) {
+ i--;//有重复就再生成一次
           }
         }
     }
@@ -33,7 +30,7 @@ function num(most,few ) {//生成数组
     arr[i] = i;//存入数组
  }
  for (var i = 0; i < few; i++) {
-    var ran = Math.floor(Math.random() * (arr.length - i));//生成随机数
+	var ran = Math.floor(Math.random() * (arr.length - i));//生成随机数
     reult[i]=arr[ran];//往随机数组里边存入随机选中的数
     arr[ran] = arr[arr.length - i - 1];//数组内容替换
   }
