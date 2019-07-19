@@ -1,5 +1,8 @@
-var reult = [];//新建数组
-var colors = [];
+var reult = [];//随机数组
+var colors = [];//颜色数组
+var set;//定时器
+var main_div;//盒子
+var noclick=true;//防止重复点击
 function colorss() {//生成随机颜色
    for (var i = 0; i < 3; i++) {//生成三种随机色
     var color = "#";
@@ -10,8 +13,8 @@ function colorss() {//生成随机颜色
         }
         color += r.toString(16);//转换16进制
         }
-    colors[i] = color.toString(16); //转换16进制存入颜色数组
- }
+    colors[i] = color
+ 
     if (i > 0) { //颜色查重
        for (var t = 0; t < colors.length; t++) {
           if (colors[i] != colors[t]) {//没有重复就退出
@@ -23,36 +26,41 @@ function colorss() {//生成随机颜色
         }
     }
 }
-function num() {
- var arr = [];//生成数组
- for (var i = 0; i <= 8; i++) {
+}
+function num(bag,samll ) {//生成数组
+ var arr = [];
+ for (var i = 0; i <= bag; i++) {
     arr[i] = i;//存入数组
  }
- for (var i = 0; i < 3; i++) {
+ for (var i = 0; i < samll; i++) {
     var ran = Math.floor(Math.random() * (arr.length - i));//生成随机数
     reult[i]=arr[ran];//往随机数组里边存入随机选中的数
     arr[ran] = arr[arr.length - i - 1];//数组内容替换
   }
 }
-function move() {
- colorss();num();stop();//调用函数
- var y = document.getElementById("main").getElementsByTagName("div");//DOM操作选中标签
-  for(var i=0;i<reult.length;i++){
-    y[reult[i]].style.backgroundColor = colors[i];//循环赋色
-  }
- var set=window.setInterval("move()",500); 
- document.getElementById("top").style.backgroundColor = "orange";//按钮改色
- document.getElementById("top").style.color = "#fff"
- document.getElementById("buttom").removeAttribute("style");
-
+function checked(top,buttom){//选择改色
+    document.getElementById(top).removeAttribute("style");
+    document.getElementById(buttom).style.backgroundColor = "orange";
+    document.getElementById(buttom).style.color = "#fff";
 }
-function stop() {
-    var y = document.getElementById("main").getElementsByTagName("div");
-    for (var i = 0; i < y.length; i++) {//去色
-       y[i].removeAttribute("style");
+function move() {//开始
+   if(noclick){
+ colorss();num("8","3");stop();
+ for(var i=0;i<reult.length;i++){
+   main_div[reult[i]].style.backgroundColor = colors[i];//循环赋色
+  }
+set=window.setInterval(function(){noclick=true;move();},500); 
+checked("buttom","top");
+noclick=false;
+console.log(noclick);
+}
+}
+function stop() {//停止
+    window.clearInterval(set); 
+    main_div = document.getElementById("main").getElementsByTagName("div");
+    for (var i = 0; i < main_div.length; i++) {//去色
+      main_div[i].removeAttribute("style");
     }
-    var clear=window.clearInterval("set"); 
-    document.getElementById("top").removeAttribute("style");//按钮改色
-    document.getElementById("buttom").style.backgroundColor = "orange"
-    document.getElementById("buttom").style.color = "#fff"
+    noclick=true
+  checked("top","buttom");
 }
