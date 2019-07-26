@@ -196,7 +196,7 @@ input[type="range"] {
   border: 0;
   margin: 7px  20px 0;
   background-color: #fbb435;
-  border-radius: 3px;
+  border-radius: 5px;
   position: relative;
   -webkit-appearance: none !important;
   outline: none;
@@ -208,6 +208,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 25px;
   border-radius: 50%;
   background: #fbb435;
+  border: 3px solid #fff;
   cursor: pointer !important;
 }
 
