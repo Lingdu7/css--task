@@ -74,6 +74,7 @@ h5{font-size: 18px;font-weight: 500;}
 }
 .word-break{
     word-break: break-all;
+    
 }
 /*媒体查询*/
 @media(max-width:575.88px){

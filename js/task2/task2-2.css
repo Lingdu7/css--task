@@ -68,6 +68,8 @@ header a {
 
 .match-box {
   display: flex;
+  height: 300px;
+  padding: 20px;
 }
 
 .match {
@@ -88,7 +90,7 @@ header a {
   height: 50px;
   border-radius: 50%;
   background-color: #666;
-  margin: 0 10px;
+  margin: 0 5px 0 10px;
 }
 
 .height {
@@ -102,7 +104,7 @@ header a {
   line-height: 60px;
   color: #fff;
   font-size: 20px;
-  background-color: orange;
+  background-color: #fbb435;
 }
 
 #playnum {
@@ -110,14 +112,14 @@ header a {
   border-radius: 5px;
   line-height: 16px;
   border: 0;
-  color: orange;
+  color: #fbb435;
   background-color: #e7e7e7;
   outline: none;
 }
 
 .point {
   font-size: 12px;
-  color: orange;
+  color: #fbb435;
 }
 
 .flex {
@@ -128,4 +130,60 @@ header a {
 
 .margin-tb10 {
   margin: 10px 0;
+}
+
+.tanchu {
+  display: none;
+  position: fixed;
+  top: 0;
+  max-width: 768px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.tanchu .box {
+  width: 50%;
+  min-width: 230px;
+  margin: 39vh auto 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px #333;
+  border-radius: 5px;
+}
+
+.tanchu .text {
+  line-height: 100px;
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+}
+
+.tanchu .btn-box {
+  display: flex;
+  border-top: 1px solid #666;
+}
+
+.tanchu .btn-l {
+  line-height: 50px;
+  font-size: 16px;
+  flex: 1;
+  background-color: #fff;
+  padding: 0;
+  border-bottom-left-radius: 5px;
+}
+
+.tanchu .btn-r {
+  border-left: 1px solid #666;
+  background-color: #fff;
+  font-size: 16px;
+  flex: 1;
+  padding: 0;
+  border-bottom-right-radius: 5px;
+}
+
+.tanchu .btn-r:hover, .tanchu .btn-l:hover {
+  background-color: #fbb435;
+  color: #fff;
+  border-color: #fff;
 }

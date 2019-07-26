@@ -39,10 +39,22 @@
         <span>请输入玩家数量</span>
         <input type="text" id="playnum" width="20px">
         <span class="point">玩家数量限制4-18人</span>
-    </div>
-    <div style="width: 80%;height: 5px;background-color: orange;"></div>
+    </div> 
+    <input type="range" min="4" max="18" step="1"/>
     </div>
     <button class="button" onclick="ifplaynum()">去发牌</button>
+    <!--弹出框-->
+    <div class="tanchu" id="tanchu">
+        <div class="box">
+            <div>
+                <p class="text">请输入正确的玩家人数</p>
+            </div>
+            <div class="btn-box">
+                <button class="btn-l" onclick=" none()">取消</button>
+                <button class="btn-r" onclick=" none()">确认</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
