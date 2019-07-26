@@ -11,7 +11,7 @@
     <title>玩家匹配</title>
 </head>
 
-<body>
+<body style="overflow: auto;">
         <header>
                 <nav>
                         <a class="iconfont drop" for="task2-1.html">&#xe6bf;</a>
@@ -34,12 +34,12 @@
 <div style="min-height: 30px;padding: 10px 0 10px 20px;" class="player ">
         <span style="line-height: 18px;font-size:12px;text-align: center;" id="quanbu"></span>
 </div>
-<div class="player height flex">
-    <div class="margin-tb10">
+<div class="player padding-20  flex">
+    <div class="margin-tb10 ">
         <span>请输入玩家数量</span>
         <input type="text" id="playnum" width="20px">
         <span class="point">玩家数量限制4-18人</span>
-    </div> 
+    </div> <br>
     <input type="range" min="4" max="18" step="1"/>
     </div>
     <button class="button" onclick="ifplaynum()">去发牌</button>
