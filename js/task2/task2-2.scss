@@ -68,6 +68,7 @@ font-size: 26px !important;
 .match{
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 50%;
   height: 50px;
   margin-top: 20px;
@@ -117,7 +118,7 @@ color: $minorcolor;
 }
 
 .margin-tb10{
-  margin:10px 0 30px;
+  margin:10px 0 ;
 }
 .tanchu{
   display: none;
@@ -136,6 +137,7 @@ z-index: 999;
   box-shadow: 0 0 10px #333;
   border-radius: 5px;
 }
+
 .text{
   line-height: 100px;
   text-align: center;
@@ -185,4 +187,8 @@ input[type=range]::-webkit-slider-thumb {
   width: 25px;
   height: 25px;
   background:  $minorcolor;
+}
+.ragan-box{
+  line-height: 60px;
+  text-align: center;
 }

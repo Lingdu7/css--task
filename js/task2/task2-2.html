@@ -14,7 +14,7 @@
 <body style="overflow: auto;">
         <header>
                 <nav>
-                        <a class="iconfont drop" for="task2-1.html">&#xe6bf;</a>
+                        <a class="iconfont drop" href="task2-1.html">&#xe6bf;</a>
                     </nav>
                 </header>
                       
@@ -31,18 +31,17 @@
     </div>
    
 </div>
-<div style="min-height: 30px;padding: 10px 0 10px 20px;" class="player ">
-        <span style="line-height: 18px;font-size:12px;text-align: center;" id="quanbu"></span>
+<div class="player ragan-box ">
+        <input type="range" min="4" max="18" step="1" id="playn" value="4" oninput="bbb()"/>
 </div>
 <div class="player padding-20  flex">
     <div class="margin-tb10 ">
         <span>请输入玩家数量</span>
-        <input type="text" id="playnum" width="20px">
+        <input type="text" id="playnum" width="20px" value="4" oninput="aaa()">
         <span class="point">玩家数量限制4-18人</span>
-    </div> <br>
-    <input type="range" min="4" max="18" step="1"/>
+    </div> 
     </div>
-    <button class="button" onclick="ifplaynum()">去发牌</button>
+    <button class="button" onclick="ifa()">去发牌</button>
     <!--弹出框-->
     <div class="tanchu" id="tanchu">
         <div class="box">

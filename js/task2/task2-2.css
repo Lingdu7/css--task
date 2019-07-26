@@ -75,6 +75,7 @@ header a {
 .match {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 50%;
   height: 50px;
   margin-top: 20px;
@@ -129,7 +130,7 @@ header a {
 }
 
 .margin-tb10 {
-  margin: 10px 0 30px;
+  margin: 10px 0;
 }
 
 .tanchu {
@@ -204,4 +205,9 @@ input[type=range]::-webkit-slider-thumb {
   width: 25px;
   height: 25px;
   background: #fbb435;
+}
+
+.ragan-box {
+  line-height: 60px;
+  text-align: center;
 }

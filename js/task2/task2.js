@@ -1,13 +1,14 @@
 var number;
+var numbe;
 var playid=[];
+
 //根据玩家数生成数组+随机分配身份
 function wath_num(){
   var mathnum=[];
   var lang=0;
     for(var i=0;i<number;i++){
-      if(i!=0&&i%3==0){
-       
-        playid.push("狼人");
+      if(i==0||(i!=0&&i%5==0)){
+        playid.push("杀手");
         lang++;
     }
     else{
@@ -30,11 +31,35 @@ for(var ii=1;ii<=number;){
   document.getElementById("button2").innerHTML="查看"+ii+"号身份";
 }
 }
+function aaa(){
+  number=document.getElementById("playnum").value;
+  numbe=document.getElementById("playn").value;
+  document.getElementById("playn").value=number;
+  ifplaynum()
+}
+function bbb(){
+  number=document.getElementById("playnum").value;
+  numbe=document.getElementById("playn").value;
+  document.getElementById("playnum").value=null;
+  number=numbe;
+  document.getElementById("playnum").value=number;
+  
+  ifplaynum()
+}
 //判断输入数
 function ifplaynum(){
-   number=document.getElementById("playnum").value;
   if(number>=4&&number<=18){
     wath_num();
+    
+  }
+  else{
+    document.getElementById("shashou").innerHTML="&ensp;";
+    document.getElementById("pingming").innerHTML="&ensp;";
+  }
+  
+}
+function ifa(){
+  if(number>=4&&number<=18){
     window.location.href="task2-3.html";
   }
   else{
@@ -45,13 +70,13 @@ function ifplaynum(){
 function none(){
   document.getElementById("tanchu").style.display="none";
 }
-　  document.onkeydown=function(event){
+　document.onkeydown=function(event){
   var e = event || window.event || arguments.callee.caller.arguments[0];
  
   if(e && e.keyCode==27){ 
     none()
   }
    if(e && e.keyCode==13){ 
-    ifplaynum()
+    ifa()
   }
 }; 
