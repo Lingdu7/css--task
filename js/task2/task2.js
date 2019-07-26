@@ -31,32 +31,63 @@ for(var ii=1;ii<=number;){
   document.getElementById("button2").innerHTML="查看"+ii+"号身份";
 }
 }
-function aaa(){
+function shuju(){
   number=document.getElementById("playnum").value;
   numbe=document.getElementById("playn").value;
+}
+function aaa(){
+  shuju()
   document.getElementById("playn").value=number;
   ifplaynum()
 }
-function bbb(){
-  number=document.getElementById("playnum").value;
-  numbe=document.getElementById("playn").value;
+function jian(){
+  shuju()
+if(numbe>4&&numbe<19){
+  numbe-=1;
   document.getElementById("playnum").value=null;
   number=numbe;
+  document.getElementById("playn").value=number;
   document.getElementById("playnum").value=number;
   
   ifplaynum()
+
+}
+}
+function jia(){
+  shuju()
+if(numbe>3&&numbe<18){
+  numbe=(numbe-0+1);
+  document.getElementById("playnum").value=null;
+  number=numbe;
+  document.getElementById("playn").value=number;
+  document.getElementById("playnum").value=number;
+  
+  ifplaynum()
+
+}
+}
+function bbb(){
+  shuju()
+  document.getElementById("playnum").value=null;
+  number=numbe;
+  document.getElementById("playnum").value=number;
+  ifplaynum()
+  
 }
 //判断输入数
 function ifplaynum(){
   if(number>=4&&number<=18){
     wath_num();
-    
   }
   else{
     document.getElementById("shashou").innerHTML="&ensp;";
     document.getElementById("pingming").innerHTML="&ensp;";
+    window.setTimeout(function(){vvv()},1000);}
   }
-  
+function vvv(){
+  if(number!=0&&!(number>=4&&number<=18)){
+    document.getElementById("tanchu").style.display="block";
+  }
 }
 function ifa(){
   if(number>=4&&number<=18){

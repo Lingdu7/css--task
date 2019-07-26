@@ -190,9 +190,11 @@ header a {
 }
 
 input[type="range"] {
-  width: 90%;
+  width: 100%;
+  flex: 1;
   height: 10px;
   border: 0;
+  margin: 7px  20px 0;
   background-color: #fbb435;
   border-radius: 3px;
   position: relative;
@@ -204,10 +206,25 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 25px;
   height: 25px;
+  border-radius: 50%;
   background: #fbb435;
+  cursor: pointer !important;
 }
 
 .ragan-box {
-  line-height: 60px;
+  height: 60px;
+  align-content: center;
+  padding: 10px;
+}
+
+.push {
+  width: 25px;
+  line-height: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #fff;
   text-align: center;
+  cursor: pointer !important;
+  background-color: #fbb435;
 }

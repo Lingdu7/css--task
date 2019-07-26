@@ -31,8 +31,10 @@
     </div>
    
 </div>
-<div class="player ragan-box ">
-        <input type="range" min="4" max="18" step="1" id="playn"  value="0" oninput="bbb()"/>
+<div class="player ragan-box flex">
+      <div onclick="jian()" class="push">-</div>  
+      <input type="range" min="4" max="18" step="1" id="playn"  value="4" oninput="bbb()"/> 
+      <div onclick="jia()" class="push"style=" line-height: 27px;">+</div> 
 </div>
 <div class="player padding-20  flex">
     <div class="margin-tb10 ">
@@ -41,7 +43,8 @@
         <span class="point">玩家数量限制4-18人</span>
     </div> 
     </div>
-    <button class="button" onclick="ifa()">去发牌</button>
+    <button class="button" style="
+    cursor: Pointer" onclick="ifa()">去发牌</button>
     <!--弹出框-->
     <div class="tanchu" id="tanchu">
         <div class="box">
