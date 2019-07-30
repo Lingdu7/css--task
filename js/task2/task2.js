@@ -1,96 +1,87 @@
 var number;
 var numbe;
 var playid=[];
-
-//根据玩家数生成数组+随机分配身份
-function wath_num(){
-  var mathnum=[];
-  var lang=0;
-    for(var i=0;i<number;i++){
-      if(i==0||(i!=0&&i%5==0)){
-        playid.push("杀手");
-        lang++;
+//根据玩家数生成身份数组
+function playersId(){
+var killer=0;
+playid.length=0;
+for(var i=0;i<number;i++){
+    if(i==0||(i!=0&&i%5==0)){
+    playid.push("杀手");
+    killer++;
     }
     else{
       playid.push("平民");
     }
   }
-  for (var t = 0; t < number; t++) {
-    var ran = Math.floor(Math.random() * (number - t));//生成随机数
-      mathnum[t]=playid[ran];//往随机数组里边存入随机选中的数
-      playid[ran] = playid[number - t - 1];//数组内容替换
-    }
-  var ping=number-lang;
-  document.getElementById("shashou").innerHTML=lang;
-  document.getElementById("pingming").innerHTML=ping;
-}
-//给身份
-function identity(){
-for(var ii=1;ii<=number;){
-  document.getElementById("rnum").innerHTML=ii;
-  document.getElementById("button2").innerHTML="查看"+ii+"号身份";
-}
-}
-function shuju(){
-  number=document.getElementById("playnum").value;
-  numbe=document.getElementById("playn").value;
-}
-function aaa(){
-  shuju()
-  document.getElementById("playn").value=number;
-  ifplaynum()
-}
-function jian(){
-  shuju()
-if(numbe>4&&numbe<19){
-  numbe-=1;
-  document.getElementById("playnum").value=null;
-  number=numbe;
-  document.getElementById("playn").value=number;
-  document.getElementById("playnum").value=number;
-  
-  ifplaynum()
-
-}
-}
-function jia(){
-  shuju()
-if(numbe>3&&numbe<18){
-  numbe=(numbe-0+1);
-  document.getElementById("playnum").value=null;
-  number=numbe;
-  document.getElementById("playn").value=number;
-  document.getElementById("playnum").value=number;
-  
-  ifplaynum()
-
-}
-}
-function bbb(){
-  shuju()
-  document.getElementById("playnum").value=null;
-  number=numbe;
-  document.getElementById("playnum").value=number;
-  ifplaynum()
-  
+  var civilian=number-killer;
+  document.getElementById("killer").innerHTML=killer;
+  document.getElementById("civilian").innerHTML=civilian;
 }
 //判断输入数
 function ifplaynum(){
   if(number>=4&&number<=18){
-    wath_num();
+    playersId();
   }
   else{
-    document.getElementById("shashou").innerHTML="&ensp;";
-    document.getElementById("pingming").innerHTML="&ensp;";
-    window.setTimeout(function(){vvv()},1000);}
+    document.getElementById("killer").innerHTML="&ensp;";
+    document.getElementById("civilian").innerHTML="&ensp;";
+    window.setTimeout(function(){ifAlert()},1000);}
   }
-function vvv(){
-  if(number!=0&&!(number>=4&&number<=18)){
-    document.getElementById("tanchu").style.display="block";
+  //判断弹窗
+  function ifAlert(){
+    if(number!=0&&!(number>=4&&number<=18)){
+      document.getElementById("tanchu").style.display="block";
+    }
   }
+  //输入滑动数互通
+function playersNumber(){
+  number=document.getElementById("playersNum").value;
+ numbe=document.getElementById("playersRange").value;
+}  
+//输入数
+function clickNum(){
+  playersNumber()
+  document.getElementById("playersRange").value=number;
+  ifplaynum()
+} 
+//滑动数
+function clickRange(){
+  playersNumber()
+  document.getElementById("playersNum").value=null;
+  number=numbe;
+  document.getElementById("playersNum").value=number;
+  ifplaynum()
+  
 }
-function ifa(){
+  function less(){
+    playersNumber()
+  if(numbe>4&&numbe<19){
+    numbe-=1;
+    document.getElementById("playersNum").value=null;
+    number=numbe;
+    document.getElementById("playersRange").value=number;
+    document.getElementById("playersNum").value=number;
+    ifplaynum()
+  
+  }
+  }
+  function plus(){
+    playersNumber()
+  if(numbe>3&&numbe<18){
+    numbe=(numbe-0+1);
+    document.getElementById("playersNum").value=null;
+    number=numbe;
+    document.getElementById("playersRange").value=number;
+    document.getElementById("playersNum").value=number;
+    ifplaynum()
+  }
+  }
+  
+//跳转
+function ifClick(){
   if(number>=4&&number<=18){
+    randomId()
     window.location.href="task2-3.html";
   }
   else{
@@ -98,16 +89,27 @@ function ifa(){
   }
 }
 //关闭弹窗
-function none(){
+function alertNone(){
   document.getElementById("tanchu").style.display="none";
 }
+//键盘事件
 　document.onkeydown=function(event){
   var e = event || window.event || arguments.callee.caller.arguments[0];
  
   if(e && e.keyCode==27){ 
-    none()
+    alertNone()
   }
    if(e && e.keyCode==13){ 
-    ifa()
+     ifClick()
   }
 }; 
+//打乱身份
+function randomId(){
+var randomid=[];
+  for (var t = 0; t < number; t++) {
+    var ran = Math.floor(Math.random() * (number - t));//生成随机数
+      randomid[t]=playid[ran];//往随机数组里边存入随机选中的数
+      playid[ran] = playid[number - t - 1];//数组内容替换
+    }
+    sessionStorage.setItem('queryParam',JSON.stringify(randomid))
+  }

@@ -23,28 +23,28 @@
 <div class="player">
     <div class="match-box">
             <div class="match">
-                    <img class="img" src="img/timg.jpg"><span>杀手</span><span id="shashou">&emsp;</span><span>人</span>
+                    <img class="img" src="img/timg.jpg"><span>杀手</span><span id="killer">&emsp;</span><span>人</span>
                 </div>
                 <div class="match">
-                     <img class="img" src="img/timg-1.jpg"><span>平民</span><span id="pingming">&emsp;</span><span>人</span>
+                     <img class="img" src="img/timg-1.jpg"><span>平民</span><span id="civilian">&emsp;</span><span>人</span>
                     </div>
     </div>
    
 </div>
 <div class="player ragan-box flex">
-      <div onclick="jian()" class="push">-</div>  
-      <input type="range" min="4" max="18" step="1" id="playn"  value="4" oninput="bbb()"/> 
-      <div onclick="jia()" class="push">+</div> 
+      <div onclick="less()" class="push">-</div>  
+      <input type="range" min="4" max="18" step="1" id="playersRange"  value="4" oninput="clickRange()"/> 
+      <div onclick="plus()" class="push">+</div> 
 </div>
 <div class="player padding-20  flex">
     <div class="margin-tb10 ">
         <span>请输入玩家数量</span>
-        <input type="text" id="playnum" width="20px" oninput="aaa()">
+        <input type="text" id="playersNum" oninput="clickNum()">
         <span class="point">玩家数量限制4-18人</span>
     </div> 
     </div>
     <button class="button" style="
-    cursor: Pointer" onclick="ifa()">去发牌</button>
+    cursor: Pointer" onclick="ifClick()">去发牌</button>
     <!--弹出框-->
     <div class="tanchu" id="tanchu">
         <div class="box">
@@ -52,8 +52,8 @@
                 <p class="text">请输入正确的玩家人数</p>
             </div>
             <div class="btn-box">
-                <button class="btn-l" onclick=" none()">取消</button>
-                <button class="btn-r" onclick=" none()">确认</button>
+                <button class="btn-l" onclick="alertNone()">取消</button>
+                <button class="btn-r" onclick="alertNone()">确认</button>
             </div>
         </div>
     </div>

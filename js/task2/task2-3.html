@@ -7,7 +7,8 @@
     <link http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="iconfont.css">
     <link rel="stylesheet" type="text/css" href="task2-3.css">
-    <script src="task2.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    <script src="task2-2.js"></script>
     <title>查看身份</title>
 </head>
 
@@ -25,14 +26,17 @@
 <div id="rnum">
 1
 </div>
-<div style="background-color:#ffedc5; font-size: 18px; text-align: center; ">
-    <span style="display: inline-block;height: 64vh;;width: 1px;vertical-align: middle;margin-left: -1px;"></span>
-<img src="img/fanpai.png" style="width: 150px;height: 150px;border-radius: 50%;vertical-align: middle">
+<div style="background-color:#ffedc5; font-size: 18px; text-align: center;height: 64vh;display: flex;align-items: center;justify-content: center;">
+<img id="fanpai" src="img/fanpai.png" style="width: 150px;height: 150px;border-radius: 50%;vertical-align: middle">
+<div id="wow" style="display: none;">
+    <img  src="img/wowpng.png" style="width: 100px;height: 100px;border-radius: 50%;vertical-align: middle;">
+    <p>狼人</p>
 </div>
-
+</div>
 <button class="button" id="button2" onclick="identity()">查看1号身份</button>
 </div>
   
+<p id="tiao" style="color: rgba(0,0,0,0.1);position: fixed;bottom:70px;font-size: 12px;margin: 0 ;max-width: 768px;width: 100%;text-align: center;">点击我直接进入下一页</p>
 </body>
 
 </html>
