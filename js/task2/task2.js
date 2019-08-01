@@ -17,6 +17,8 @@ for(var i=0;i<number;i++){
   var civilian=number-killer;
   document.getElementById("killer").innerHTML=killer;
   document.getElementById("civilian").innerHTML=civilian;
+  sessionStorage.setItem("civilian",civilian);
+  sessionStorage.setItem("killer",killer);
 }
 //判断输入数
 function ifplaynum(){
@@ -111,5 +113,8 @@ var randomid=[];
       randomid[t]=playid[ran];//往随机数组里边存入随机选中的数
       playid[ran] = playid[number - t - 1];//数组内容替换
     }
-    sessionStorage.setItem('queryParam',JSON.stringify(randomid))
+    var qqq=[];
+   
+    sessionStorage.setItem('queryParam',JSON.stringify(randomid));
+       
   }

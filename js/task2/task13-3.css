@@ -141,8 +141,16 @@ button {
   cursor: pointer;
   background-color: #ffc865;
   width: 100%;
-}
 
+}
+.aaa {
+  display: none;
+}
+.aaa button{
+  background-color: #69d1e9;
+  margin: 20px;
+  width: calc(100% - 40px);
+}
 button:hover {
   background-color: #f2a823;
 }
@@ -152,7 +160,6 @@ button:hover {
   flex-wrap: wrap;
   align-content: flex-start;
   padding: 27px  5px 0;
-  background-color: #69d1e9;
 }
 
 .bigbox .box-box {
