@@ -4,6 +4,7 @@ var bc=3;
 var ts=1;
 var tt=0;
 var ttt=0;
+var bbc=0;
 var jilu=[];
 var c=[];//活人名单
 var civilian=sessionStorage.getItem("civilian");
@@ -24,6 +25,7 @@ for(players+=1;players<19;players++){
 }
 //点击杀人
 $("#sssr").click(function(){
+  if(bbc==0){
   ttt=0;
   $("#kaishi button").text("杀人")
   $("#sssr").css("background-color","#83b09a")
@@ -31,16 +33,20 @@ $("#sssr").click(function(){
 $(".aaa").hide();
 $(".bigbox ,footer").show();
 bc=0;
+bbc++;
+}
 })
 $("#toup").click(function(){
+  if(bbc==3){
   $(".aaa").hide();
   bc=1;
   ttt=0;
+  bbc=0;
   $("#kaishi button").text("投死")
 $(".maincolor").css("backgroundColor","#69d1e9");
   $(".bigbox ,footer").show();
   $("#tan1 ,#tan2 ,#sssr").css("background-color","#69d1e9")
-})
+}})
 $(".bigbox").on("click",".outerBox",function(){
   //获取被杀者id
 var bb= "#"+$(this).attr("id")+" .samllbox1"
@@ -94,13 +100,17 @@ else{
   alert(i+"号"+newid[i-1]+"已死，别鞭尸了");
 }}}}})
 $("#tan1").click(function(){
+  if(bbc==1){
   alert("说话")
   $("#tan1").css("background-color","#83b09a")
-})
+  bbc++;
+}})
 $("#tan2").click(function(){
+  if(bbc==2){
+    bbc++;
   alert("说话")
   $("#tan2").css("background-color","#83b09a")
-})
+}})
 $("#kaishi").click(function(){
 $(".aaa").show();
 $(".bigbox ,footer").hide();
