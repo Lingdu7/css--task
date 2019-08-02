@@ -1,13 +1,14 @@
 body {
   max-width: 768px;
   width: 100%;
-  margin: 124px auto 95px;
+  margin: 131px auto 95px;
   font-family: "STHeiti";
 }
 
 .maincolor {
   background: #69d1e9;
   min-height: calc(100vh - 219px);
+  align-items: center
 }
 
 a {
@@ -145,13 +146,30 @@ button {
 }
 .aaa {
   display: none;
+  border: 1px solid rgba(0, 0, 0, 0)
+}
+.aaa>p p{
+  line-height:25px;
+  text-align:center; 
+  color: #666;
+}
+.aaa p{
+  margin:0; 
+}
+.aaa>div{
+  line-height:36px;
+  background-color:#d7f7ff;
+  text-align:center;
+  margin:3px 18px ;
+  border-radius: 5px;
+  color: #29bde0;
 }
 .aaa button{
   background-color: #69d1e9;
-  margin: 20px;
+  margin: 10px 20px;
   width: calc(100% - 40px);
 }
-button:hover {
+footer button:hover {
   background-color: #f2a823;
 }
 

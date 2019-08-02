@@ -30,21 +30,20 @@ $("#sssr").click(function(){
   $("#kaishi button").text("杀人")
   $("#sssr").css("background-color","#83b09a")
   $(".maincolor").css("backgroundColor","#5294a4");
-$(".aaa").hide();
-$(".bigbox ,footer").show();
+$(".aaa , .bigbox ,footer").toogle();
 bc=0;
 bbc++;
 }
 })
 $("#toup").click(function(){
   if(bbc==3){
-  $(".aaa").hide();
+  
   bc=1;
   ttt=0;
   bbc=0;
   $("#kaishi button").text("投死")
 $(".maincolor").css("backgroundColor","#69d1e9");
-  $(".bigbox ,footer").show();
+   $(".aaa , .bigbox ,footer").toogle();
   $("#tan1 ,#tan2 ,#sssr").css("background-color","#69d1e9")
 }})
 $(".bigbox").on("click",".outerBox",function(){
@@ -114,9 +113,7 @@ $("#tan2").click(function(){
 $("#kaishi").click(function(){
 $(".aaa").show();
 $(".bigbox ,footer").hide();
-if(tt==0){
-  $(".maincolor").css("backgroundColor","#5294a4");
-}
+
 if(jilu[0]!=undefined){
   $("#sssr").after("<p style=text-align:center;width=100%;>"+jilu[tt]+"</p>");
 tt++;
