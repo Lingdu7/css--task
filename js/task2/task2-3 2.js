@@ -32,11 +32,14 @@ $("#sssr").click(function(){
   mark=0;
   $("#sssr").css("background-color","#bcccd0")
   $(".aaa").hide();
-  $(".bigbox ,footer").show();
-  $("#kaishi button").text("杀手杀人")
+  $("#navtext").text("月黑风高杀人夜");
+  $(".bigbox ,footer,#nvab").show();
+  $("#kaishi button").text("杀手杀人");
+  $("#body").css("margin-top","131px");
   $(".maincolor").css("backgroundColor","#5294a4");
-  $("#tan1").css("background-color","#69d1e9")
+  $("#tan1").css("background-color","#69d1e9");
   $(".aaa>p").hide()
+  $("#prompt").text("天黑了杀手请睁眼，请选择需要杀掉的平民")
   time=0;
   cycle++;
 }
@@ -75,10 +78,13 @@ $("#toup").click(function(){
   mark=0;
   cycle=0;
   $(".aaa").hide();
-  $(".bigbox ,footer").show();
+  $("#navtext").text("日出惊现杀人案");
+  $(".bigbox ,footer,#nvab").show();
   $("#kaishi button").text("众人投票")
   $("#sssr , .maincolor").css("background-color","#69d1e9")
   $(".aaa>p").hide()
+  $("#body").css("margin-top","131px")
+  $("#prompt").text("发言讨论结束，大家请投票")
 }
 else{
   alert("请按照游戏规则流程进行下一步");
@@ -124,7 +130,9 @@ else{
 //点击开始按钮
 $("#kaishi").click(function(){
   $(".aaa").show();
-  $(".bigbox ,footer").hide();
+  $(".bigbox ,footer,#nvab").hide();
+  $("#navtext").text("法官日志");
+  $("body").css("margin-top","50px")
 //生成杀人记录
 console.log(mark);
 console.log(killer);
