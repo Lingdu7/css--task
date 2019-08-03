@@ -34,6 +34,7 @@ header {
   max-width: 768px;
   color: #fff;
   background-color: #69d1e9;
+  z-index: 999;
 }
 
 header nav {
@@ -76,10 +77,18 @@ header hr {
   justify-content: space-between;
   align-items: left;
   flex-direction: column;
+  position: relative;
   background-color: #69d1e9;
   padding: 10px 10%;
 }
-
+.shengli{
+  position: absolute;
+    top: 58px;
+    left: 50%;
+    margin-left: -54px;
+    font-size: 27px;
+    color: #fff;
+}
 .result div:nth-last-child(2) {
   text-align: center;
 }
@@ -168,22 +177,15 @@ footer > button:hover {
   width: 80%;
   margin: 0 auto;
 }
-
-.centent span:nth-last-child(2) {
-  float: right;
-  font-size: 12px;
-  color: #c7c7c7;
-  line-height: 30px;
-}
-
-.centent span:nth-last-child(3) {
+.centent span {
   color: #515151;
   line-height: 30px;
+  margin: 7px 0;
 }
 
-.centent pre {
+.centent p  {
   font-size: 14px;
   color: #c7c7c7;
   line-height: 22px;
-  margin: 7px 0;
+  margin: 3px 0;
 }

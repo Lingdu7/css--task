@@ -32,6 +32,9 @@ $("#sssr").click(function(){
   for(var i=1;i<=players;i++){
     if(newid[i-1]=="杀手"){
       $("#c"+i+" .samllbox1").text(newid[i-1]);
+      if(c[i-1]==0){
+      $("#c"+i+" .samllbox2").css("background-color","#4bc072");
+    }
     }
   }
   $("#sssr").css("background-color","#bcccd0")
@@ -43,7 +46,7 @@ $("#sssr").click(function(){
   $(".maincolor").css("backgroundColor","#5294a4");
   $("#tan1").css("background-color","#69d1e9");
   $(".aaa>p").hide()
-  $("#prompt").text("天黑了杀手请睁眼，请选择需要杀掉的平民")
+  $("#prompt").text("天黑了杀手请睁眼，请杀掉一个玩家")
   time=0;
   cycle++;
 }
@@ -78,11 +81,7 @@ else{
 //众人投票
 $("#toup").click(function(){
   if(cycle==3){
-    for(var i=1;i<=players;i++){
-      if(newid[i-1]=="杀手"){
-        $("#c"+i+" .samllbox1").text("玩家");
-      }
-    }
+   
   time=1;
   mark=0;
   cycle=0;
@@ -142,6 +141,12 @@ else{
 })
 //点击开始按钮
 $("#kaishi").click(function(){
+  for(var i=1;i<=players;i++){
+      $("#c"+i+" .samllbox1").text("玩家");
+    if(newid[i-1]=="杀手"){
+      $("#c"+i+" .samllbox2").css("background-color","#83B09E");
+    }
+  }
   $(".aaa ,#end,#rizhi").show();
   $(".bigbox ,#kaishi,#nvab").hide();
   $("#navtext").text("法官日志");
@@ -166,7 +171,7 @@ $(ttt).after("<p id='p"+days+"'></p>");
     }
 
 ppp="#p"+days;
-record.push("第"+days+"天晚上"+mark+"号被杀手杀死，他的身份是"+newid[mark-1]);
+record.push("晚上："+mark+"号被杀手杀死，他的身份是"+newid[mark-1]);
     $(ppp).append("<p >"+record[notes]+"</p>");
     notes++;
   civilian--;
@@ -176,7 +181,7 @@ record.push("第"+days+"天晚上"+mark+"号被杀手杀死，他的身份是"+n
   }
   else{
     $("#sssr").before("<div id='t"+days+"'>第"+days+"天</div>")
-    record.push("第"+days+"天白天"+mark+"号被投票处死，他的身份是"+newid[mark-1]);
+    record.push("白天："+mark+"号被投票处死，他的身份是"+newid[mark-1]);
     $("body").append("<script>$('body').delegate('#t"+days+"', 'click', function () {$('#p"+days+"').slideToggle(160)});</script>");
     $(ttt).after("<p id='p"+days+"'></p>");
     $(ppp).append("<p >"+record[notes]+"</p>");
@@ -193,11 +198,19 @@ record.push("第"+days+"天晚上"+mark+"号被杀手杀死，他的身份是"+n
 
   
   if(killer==0){
-    alert("平民胜利");
+    alert("平民胜利！");
     window.location.href="task2-5.html";
+    var shuying=0;
+    sessionStorage.setItem("qu",days);
+  sessionStorage.setItem("que",shuying);
+    sessionStorage.setItem('quer',JSON.stringify(record));
   }
   else if(civilian==0||killer>=civilian ){
-    alert("杀手胜利胜利");
+    alert("杀手胜利！");
+    var shuying=1;
+    sessionStorage.setItem("que",shuying);
+     sessionStorage.setItem("qu",days);
+    sessionStorage.setItem('quer',JSON.stringify(record));
     window.location.href="task2-5.html";
   }
 }
@@ -216,6 +229,9 @@ $("#end").click(function(){
   }
 })
 $("#rizhi").click(function(){
+  for(var i=1;i<=players;i++){
+      $("#c"+i+" .samllbox1").text(newid[i-1]);
+  }
   $(".aaa,#rizhi,#end").hide();
   $(".bigbox ,#kaishi").show();
   $("#navtext").text("法官日志");
