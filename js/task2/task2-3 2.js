@@ -22,6 +22,7 @@ var time=2;//白天黑夜
 var days=1;//记录天数
 var notes=0;//有序打印杀人数组
 var mark=20;//记录上一次点击
+var marks=21;//记录上一次点击
 var cycle=0;//法官顺序
 var record=[];//杀人记录数组
  
@@ -141,20 +142,24 @@ else{
 })
 //点击开始按钮
 $("#kaishi").click(function(){
+  if((mark==marks&&time<2 )|| mark==0){
+    alert("请选择被杀人");
+  }
+  else{
   for(var i=1;i<=players;i++){
       $("#c"+i+" .samllbox1").text("玩家");
     if(newid[i-1]=="杀手"){
       $("#c"+i+" .samllbox2").css("background-color","#83B09E");
     }
   }
+  marks==mark;
   $(".aaa ,#end,#rizhi").show();
   $(".bigbox ,#kaishi,#nvab").hide();
   $("#navtext").text("法官日志");
   $("body").css("margin-top","50px")
 //生成杀人记录
 console.log(mark);
-console.log(killer);
-
+console.log(time);
 if(time<2){
   c[mark-1]=1;//标记死亡
   for(var i=1;i<=players;i++){
@@ -219,7 +224,9 @@ else if(time==3){
 $(".bigbox ,#kaishi,#nvab").hide();
 }
 else{
+  
   $("#tan1 ,#tan2 ,#toup").css("background-color","#aee7f5")
+}
 }
 })
 $("#end,#guanbi").click(function(){
