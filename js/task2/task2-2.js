@@ -2,7 +2,14 @@
 $(function(){
   $("#tiao").click(function(){
     window.location.href="task2-4.html";
+    
    });
+   $("#guanbi").click(function(){
+    var x=confirm("是否退出本局游戏")
+    if(x==true){
+      window.location.href="task2-1.html"; 
+    }
+  })
 })
 var clicknumber=1;
 var NoPlayer=1;

@@ -222,7 +222,7 @@ else{
   $("#tan1 ,#tan2 ,#toup").css("background-color","#aee7f5")
 }
 })
-$("#end").click(function(){
+$("#end,#guanbi").click(function(){
   var x=confirm("是否退出本局游戏")
   if(x==true){
     window.location.href="task2-1.html"; 
