@@ -8,9 +8,8 @@ var ttt;
 var ppp;
  //发放身份
  for(var i=1;i<=players;i++){
-  $("#c"+i+" .samllbox1").text(newid[i-1]);
   $("#c"+i+" .samllbox2").text((i)+"号");
-  c[i]=0;//编写活人名单
+  c[i-1]=0;//编写活人名单
 }
 
 
@@ -30,10 +29,15 @@ var record=[];//杀人记录数组
 $("#sssr").click(function(){
   if(cycle==0){
   mark=0;
+  for(var i=1;i<=players;i++){
+    if(newid[i-1]=="杀手"){
+      $("#c"+i+" .samllbox1").text(newid[i-1]);
+    }
+  }
   $("#sssr").css("background-color","#bcccd0")
-  $(".aaa").hide();
+  $(".aaa ,#end,#rizhi").hide();
+  $(".bigbox ,#kaishi,#nvab").show();
   $("#navtext").text("月黑风高杀人夜");
-  $(".bigbox ,footer,#nvab").show();
   $("#kaishi button").text("杀手杀人");
   $("#body").css("margin-top","131px");
   $(".maincolor").css("backgroundColor","#5294a4");
@@ -74,17 +78,23 @@ else{
 //众人投票
 $("#toup").click(function(){
   if(cycle==3){
+    for(var i=1;i<=players;i++){
+      if(newid[i-1]=="杀手"){
+        $("#c"+i+" .samllbox1").text("玩家");
+      }
+    }
   time=1;
   mark=0;
   cycle=0;
-  $(".aaa").hide();
+  $(".aaa ,#end,#rizhi").hide();
+  $(".bigbox ,#kaishi,#nvab").show();
   $("#navtext").text("日出惊现杀人案");
-  $(".bigbox ,footer,#nvab").show();
   $("#kaishi button").text("众人投票")
   $("#sssr , .maincolor").css("background-color","#69d1e9")
   $(".aaa>p").hide()
   $("#body").css("margin-top","131px")
   $("#prompt").text("发言讨论结束，大家请投票")
+ 
 }
 else{
   alert("请按照游戏规则流程进行下一步");
@@ -94,17 +104,17 @@ else{
 
 
 $(".bigbox").on("click",".outerBox",function(){
-  if(time!=2){
+  if(time<2){
   //获取被杀者id
 var opt="#"+$(this).attr("id");
 var optSon= opt+" .samllbox1";
 //搜索被杀者
 for(var i=1;i<=players;i++){
   if(("#c"+i)==opt){
-  if(c[i]==0){//查看被杀者存活情况
+  if(c[i-1]==0){//查看被杀者存活情况
     //判断是白天还是黑夜
       if(newid[i-1]=="杀手"&&time==0){
-      alert("对方是杀手，不能杀同类");
+      alert("本是同根生,相煎何太急");
       }
       else{
         if(mark==20){
@@ -120,8 +130,11 @@ for(var i=1;i<=players;i++){
   
 //如果已经被杀了，就别鞭尸了
 else{
-  alert(i+"号"+newid[i-1]+"已死，别鞭尸了");
+  alert(i+"号"+newid[i-1]+"已死，惊现鞭尸狂");
 }}}}
+else if(time==3){
+  alert("法官日志，不能杀人");
+}
 else{
   alert("游戏还没开始，请点击开始游戏");
 }
@@ -129,16 +142,21 @@ else{
 })
 //点击开始按钮
 $("#kaishi").click(function(){
-  $(".aaa").show();
-  $(".bigbox ,footer,#nvab").hide();
+  $(".aaa ,#end,#rizhi").show();
+  $(".bigbox ,#kaishi,#nvab").hide();
   $("#navtext").text("法官日志");
   $("body").css("margin-top","50px")
 //生成杀人记录
 console.log(mark);
 console.log(killer);
 
-if(time!=2){
-  c[mark]=1;//标记死亡
+if(time<2){
+  c[mark-1]=1;//标记死亡
+  for(var i=1;i<=players;i++){
+    if(c[i-1]==1){
+      $("#c"+i+" .samllbox1").text(newid[i-1]);
+    }
+  }
   if(time==0){
     if(days==1){
       $("#sssr").before("<div id='t"+days+"'>第"+days+"天</div>")
@@ -183,8 +201,28 @@ record.push("第"+days+"天晚上"+mark+"号被杀手杀死，他的身份是"+n
     window.location.href="task2-5.html";
   }
 }
+else if(time==3){
+  $(".aaa ,#end,#rizhi").show();
+$(".bigbox ,#kaishi,#nvab").hide();
+}
 else{
   $("#tan1 ,#tan2 ,#toup").css("background-color","#aee7f5")
 }
+})
+$("#end").click(function(){
+  var x=confirm("是否退出本局游戏")
+  if(x==true){
+    window.location.href="task2-1.html"; 
+  }
+})
+$("#rizhi").click(function(){
+  $(".aaa,#rizhi,#end").hide();
+  $(".bigbox ,#kaishi").show();
+  $("#navtext").text("法官日志");
+  $("#kaishi button").text("返回游戏")
+  $(".aaa>p").hide()
+  $("body").css("margin-top","46px")
+  $(".maincolor").css({"background-color":"#69d1e9","min-height":"calc(100vh - 168px)"});
+  time=3;
 })
 })

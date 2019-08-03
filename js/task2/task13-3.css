@@ -7,7 +7,7 @@ body {
 
 .maincolor {
   background: #69d1e9;
-  min-height: calc(100vh - 219px);
+  min-height: calc(100vh - 253px);
   align-items: center
 }
 
@@ -128,7 +128,10 @@ footer {
   background-color: #69d1e9;
   box-sizing: border-box;
 }
-
+#rizhi,#end{
+  display:none;
+  width: 45%;
+}
 footer a {
   width: 100%;
 }
@@ -251,4 +254,7 @@ footer button:hover {
   .outer-box {
     width: 20%;
   }
+}
+.flex{
+  display: flex;
 }
