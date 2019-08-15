@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Quirks模式是什么？</title>
+    <title>JS中基本类型和引用类型分别指的的是什么？有何区别？</title>
 
     <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/reveal.css">
 
@@ -59,7 +59,7 @@
 <div class="reveal default center" role="application" data-transition-speed="slow" data-background-transition="fade">
     <div class="slides" style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.756);">
         <section class="past" style="top: 158px; display: none;" hidden="" aria-hidden="true">
-            <h3>JS中基本类型和引用类型<br>分别指的的是什么？有何区别？</h3>
+            <h3>JS中基本类型和引用类型分别指的的是什么？有何区别？</h3>
             <p>分享人：姚富成</p>
         </section>
         <section class="past" style="top: 3px; display: block;" hidden="" aria-hidden="true">
@@ -75,61 +75,33 @@
         </section>
         <section id="beijing" class="past" style="top: 267px; display: block;" hidden="" aria-hidden="true">
             <h3>1.背景介绍</h3>
-            <p> 为什么会出现多种模式？ </p>    
-            <p style="color:rgba(255,255,255,.5)"><br>故事要从远古时期讲起...</p>
+          
         </section>
         <section class="past" style="top: 267px; display: block;" hidden="" aria-hidden="true">     
-            <h3>第一节、神仙打架</h3>
-            <p class="txt-l">在很久很久以前web世界里有两个巨人，火娃：（微软的IE） 和  水娃：（网景的Navigator）。两个熊孩子为了抢占市场份额厮杀了好久好久，你死我活的那种。并且为了划清阵营，双方开始搞差异化,导致出现了两种版本，使得受苦受难的开发者不得不针对这两种版本分别进行开发。
-               </p>    
+            <p> javascript中的变量可能包含两种不同的数据类型，基本类型和引用类型</p>   
         </section>
-        <section class="past" style="top: 267px; display: block;" hidden="" aria-hidden="true">     
-                <h3>第二节、天降正义</h3>
-                <p class="txt-l">这种情况持续到了1994年10月的某一天，葫芦娃爷爷（w3c联盟成立）听闻web世界一团糟，决定回来管管这两个熊孩子，回来之后葫爷决定自己制造标准，它制定了两步走方针
-                        <br>第一步、摧毁火娃：（微软的IE） 和  水娃：（网景的Navigator）之间的壁垒
-                        <br>第二步制定 Web 规范标准使得两个熊孩子的平台代码可以通用。
-                        <br>于是在葫爷（w3c）强大的淫威之下双方按照葫爷的规范标准重铸了自己，为了不破坏当时既有的网站，浏览器不能直接弃用这些标准。因此，浏览器采用了两种模式，用以把符合新规范的网站和老旧网站区分开。
-                   </p>    
-            </section>
-            <section class="past" style="top: 267px; display: block;" hidden="" aria-hidden="true">     
-                    <h3>目前浏览器的排版引擎有三种模式</h3>
-                </section>
-                <section class="past" style="top: 267px; display: block;" hidden="" aria-hidden="true">     
-                        <h3>Quirks模式</h3>
-                        <p class="txt-l dsp-b">在 2001 年 IE6 正式发布之前，当时的市面主要就是 IE 和 Netscape 的 Navigator 两款浏览器，而 IE 拥有很大的用户群，所以大多数的页面都是针对 IE 而设计的，但是 IE 的渲染引擎却没有遵循 W3C 的规范，当时微软已经认识到 W3C 规范的重要性,所以当 IE 发展到 IE6 的时候，渲染引擎（MSHTML.dll）做出了一个重要的改变，将自己原先不符合 W3C 规范中的盒模型 box mode 绘制方式改为与 W3C 标准一致（后面会详细讨论），由于这个重大的改动，原先针对 IE 旧版本所设计的 HTML 页面都不能正确显示了，所以在 IE6 发布的时候附带了一个切换回 IE5 页面渲染方式的功能，这个功能中就首次提出了 Quirks Mode。
-                                <br> <br>   什么是 Quirks Mode? 翻译过来就是怪异模式<br> 简单来说，Quirks Mode 就是浏览器为了兼容很早之前针对旧版本浏览器设计、并未严格遵循 W3C 标准的网页而产生的一种页面渲染模式。在怪异模式下，为了支持在网络标准未被广泛采用前，就已经建好的网站，排版会模拟 Navigator 4 与 Internet Explorer 5 的非标准行为。
-                        </p>    
-                    </section>
-                
-                    <section class="past" style="top: 267px; display: block;" hidden="" aria-hidden="true">     
-                            <h3>标准模式（Standards mode）和<br>接近标准模式（Almost standards mode）</h3>
-                            <p  class="txt-l dsp-b">实际上，在提到的具有 Quirks 和 Standards 两种文档模式的浏览器中还存在第三种模式—Almost Standards Mode。在标准模式下，行为是由 HTML 与 CSS 的规范描述的行为。在接近标准模式下，只有少数的怪异行为被实现。<br><br>
-                                这种模式和 Standards Mode 几乎一致，唯一的区别就在于某些情况下 Almost Standards Mode 会采用与 Quirks 相同的方式来绘制页面。比如当我们需要把图片分割后显示在一个表格单元中时，Almost Standards Mode 与 Quirks Mode 采用同样的绘制方式从而让图片显示不像在 Standards Mode 中那么的四分五裂。
-但是这只是极少数的情况，在大部分情况下 Almost Standards 和 Standards 两种模式是一致的，所以一般不专门区分二者
-                            </p>    
-                        </section>
+       
         <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
             <h3 id="zhishi">2.知识剖析</h3>
         </section>
         <section class="future ll" style="top: 267px; display: block;" hidden="" aria-hidden="true">
-            <h4>浏览器如何决定用哪个模式？</h4>
-            <p>对HTML文件来说，&lt;!DOCTYPE&gt;声明位于&lt;html&gt;标签之前，这个&lt;!DOCTYPE&gt;可以告知浏览器使用哪种 HTML 规范</p>
+            <h4> 1、什么是基本类型</h4>
         </section>
         <section class="future ll" style="top: 267px; display: block;" hidden="" aria-hidden="true">
-            <h4>&lt;!DOCTYPE html&gt;</h4>
-            <p>当 doctype 信息如上时，表明该页面是遵守了 HTML5 规范的，浏览器会选择 Standards Mode，这种 doctype 是最推荐的一种，我们平时设计页面都应该加上这一个 doctype。</p>
+            <p>基本数据类型有：number/string/boolean/undefined/null，基本数据类型是按值访问，可以操控保存在变量中的实际值</p>
         </section>    
         <section class="future ll" style="top: 267px; display: block;" hidden="" aria-hidden="true">
-                <h4>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</h4>
-                <p>当 doctype 如上时，浏览器同样会选择 Standards Mode，虽然和第一种 doctype 有一些区别，但是几乎可以认为是一样的。</p>
+                <h4>基本类型有什么特点</h4>
             </section>
             <section class="future ll" style="top: 267px; display: block;" hidden="" aria-hidden="true">
-                    <h4>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</h4>
-                    <p>当 doctype 如上时，浏览器会选择 Almost Standards Mode，需要注意的是如果今后需要把这个页面改为 HTML5 规范，那么上文讨论的&lt;table&gt;中的分割图片问题可能会错乱。</p>
+                
+                    <p>基本类型的值不可变<br>
+                        基本类型之间的比较是值在进行比较<br>
+                        基本类型的变量存放在栈区。<br>
+                        如果从一个变量向另一个变量复制基本类型的值，会在变量对象上创建一个新值，然后把该值复制到新变量的位置上，这两个值完全独立，可以做任何操作，互不影响</p>
                 </section>    
                 <section class="future ll" style="top: 267px; display: block;" hidden="" aria-hidden="true">
-                    <h4>当 doctype 缺失或者声明不正确的时候</h4>
-                    <p>浏览器会选择 Quirks Mode，这是非常不推荐的方式，我们应该尽量避免 Quirks Mode，这对一个web应用是非常不利的地方。</p>
+                   <img src="img/sef.png" width="1000px">
                 </section>
         <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
             <h3 id="changjian">3.常见问题</h3>

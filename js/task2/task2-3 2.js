@@ -169,8 +169,8 @@ if(time<2){
   }
   if(time==0){
     if(days==1){
+      $("body").append("<script>$('#t"+days+"').click(function () {$('#p"+days+"').slideToggle(160)});</script>");
       $("#sssr").before("<div id='t"+days+"'>第"+days+"天</div>")
-      $("body").append("<script>$('body').delegate('#t"+days+"', 'click', function () {$('#p"+days+"').slideToggle(160)});</script>");
       ttt="#t"+days;
 $(ttt).after("<p id='p"+days+"'></p>");
     }
@@ -185,9 +185,9 @@ record.push("晚上："+mark+"号被杀手杀死，他的身份是"+newid[mark-1
   ttt="#t"+days;
   }
   else{
+    $("body").append("<script>$('#t"+days+"').click(function () {$('#p"+days+"').slideToggle(160)});</script>");
     $("#sssr").before("<div id='t"+days+"'>第"+days+"天</div>")
     record.push("白天："+mark+"号被投票处死，他的身份是"+newid[mark-1]);
-    $("body").append("<script>$('body').delegate('#t"+days+"', 'click', function () {$('#p"+days+"').slideToggle(160)});</script>");
     $(ttt).after("<p id='p"+days+"'></p>");
     $(ppp).append("<p >"+record[notes]+"</p>");
     notes++;
