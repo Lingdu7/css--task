@@ -9,6 +9,10 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
+
+body{
+  margin: 0;
+}
 .bgcc{
   background-color:rgba(255, 255, 255, .9);
   width: 540px;
@@ -55,16 +59,25 @@ input{
   font-size: 18px;
   background-color: transparent;
 }
+.input-bck:hover{
+  border-color:#03a9f4;
+}
+.input-bck:hover .icon{
+  border-right: 1px solid #03a9f4;
+}
 .button{
 outline: none;
 line-height: 60px;
 width: 430px;
 background: #03a9f4;
+margin-top: 15px;
 border: none;
-margin-top: 20px;
 color: #fff;
 font-size: 22px;
 border-radius: 10px;
+}
+.button:hover{
+  background: #0b8eca;
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color:#c5c5c5;
@@ -89,4 +102,9 @@ border-radius: 10px;
 ul{
   list-style: none;
   padding-left: 36px;
+}
+#tips{
+
+  margin: 10px 0 0 50px;
+  color: #f00 ;
 }

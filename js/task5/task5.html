@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="task5.css">
+    <link rel="stylesheet" type="text/css" href="task5-1.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
-    <script src="task5.js"></script>
+    <script src="task5-1.js"></script>
     <title>后台登录</title>
 </head>
 <body>
@@ -18,17 +18,19 @@
 <form id="form">
 <div class="input-bck">
     <label class="icon icon1" for="text"></label> 
-    <input id="id" type="text" placeholder="id" autofocus  maxlength="12">
+    <input id="username" type="text" placeholder="请输入账号" autofocus  maxlength="12"><!--required -->
 </div>
 <div class="input-bck">
     <label for="password" class="icon icon2"></label> 
-    <input id="name" type="password" placeholder="name" ><!--required 输入字符-->
-    </div>
-    <input type="submit" value="search id or login name" class="button">
+    <input id="password" type="password" placeholder="请输入密码"   >
+</div>
+<div style="height: 20px;"><p id="tips" ></p></div>
+    <input type="submit" value="登&ensp;录" class="button">
 </form>
-</div>
-</div>
-</div>
 
+
+</div>
+</div>
+</div>
 </body>
 </html>
