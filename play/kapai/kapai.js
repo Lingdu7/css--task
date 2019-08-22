@@ -50,34 +50,43 @@ function Urse(name,hp,attack,crit,def,broken){
 
 
 
-var u1 = new Urse("亚瑟", 1000, 90, 0.1, 0.2, 120)
-var u2 = new Urse("后裔", 500, 200, 0.4, 0.3, 30)
+  var u1;
+  var u2;
 $("#kaishi").click(function () {
+	$("#bb,#aa1,#aa2").empty() 
+	u1 = new Urse("亚瑟", 1000, 90, 0.1, 0.2, 120);
+  u2 = new Urse("后裔", 500, 200, 0.4, 0.3, 30);
 	$("#aa1").append(`<p class="aq1">角色：${u1.name}</p><p class="aqq2">血量：${u1.hp} 攻击：${u1.attack} 暴击：${u1.crit} 破甲：${u1.broken} 防御：${u1.def}</p>`)
 	$("#aa2").append(`<p class="aq1">角色：${u2.name}</p><p class="aqq2">血量：${u2.hp} 攻击：${u2.attack} 暴击：${u2.crit} 破甲：${u2.broken} 防御：${u2.def}</p>`)
+
 })
 var o = 1;
 var b = 2;
+
 $("#sha1").click(function () {
+	if(u1){
 	if (b % 2 === 0) {
 		$("#bb").append(`<span>* * * * * * * *  第${o}轮  * * * * * * * * </span>`)
 		o++
 	}
 	b++
 	u1.hit(u2)
+}
 
 })
 $("#sha2").click(function () {
+	if(u1){
 	if (b % 2 === 0) {
 		$("#bb").append(`<span>* * * * * * * *  第${o}轮  * * * * * * * * </span>`)
 		o++
 	}
 	b++
 	u2.hit(u1)
-
+	}
 })
 
 $("#zdsha").click(function () {
+	if(u1){
 	for (var i = 0; ;) {
 		if (u1.hp === 0) {
 			break;
@@ -101,6 +110,6 @@ $("#zdsha").click(function () {
 			b++
 			u2.hit(u1)
 		}
-
+	}
 	}
 })
