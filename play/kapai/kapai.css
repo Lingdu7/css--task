@@ -1,0 +1,98 @@
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: orange;
+  color: #fff;
+  border-radius: 10px;
+}
+#kaishi {
+  width: 700px;
+  height: 120px;
+  font-size: 30px;
+  border: none;
+}
+.buttonbox {
+  display: flex;
+  width: 700px;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.buttonbox button {
+  flex: 1;
+  width: 100px;
+  height: 50px;
+}
+#sha2 {
+  margin: 0 20px;
+}
+.body,
+#bb,
+#aa {
+  width: 700px;
+  margin: 0 auto;
+}
+#bb {
+  box-sizing: border-box;
+  height: calc(90vh - 320px);
+  overflow: auto;
+  background: #f1f1f1;
+  padding: 20px;
+}
+span {
+  display: inline-block;
+  width: 100%;
+  font-size: 20px;
+  line-height: 39px;
+  text-align: center;
+  color: orange;
+  border-bottom: 1px solid orange;
+  margin: 16px 0 10px;
+  border-top: 1px solid orange;
+}
+.aq {
+  color: #f00;
+  text-align: center;
+  margin-bottom: 0px;
+}
+.aqq {
+  color: #888;
+  background: #e0e0e0;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+#aa {
+  box-sizing: border-box;
+  padding: 20px;
+  border: 2px solid orange;
+  height: 160px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+#aa div {
+  display: flex;
+}
+#aa div p {
+  border-radius: 5px;
+  line-height: 45px;
+  padding: 0 30px;
+  text-align: center;
+  margin: 0;
+}
+.aq1 {
+  color: #fff;
+  background: orange;
+  width: 20%;
+}
+.aqq2 {
+  border: 2px solid orange;
+  padding-left: 50px !important;
+  margin-left: -20px!important;
+width: 70%;
+}
+#aa1{
+	margin-bottom: 10px;
+}
