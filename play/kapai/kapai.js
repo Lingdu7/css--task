@@ -58,7 +58,7 @@ $("#kaishi").click(function () {
 	$("#bb,#aa1,#aa2").empty()
 	u1 = new Urse("亚瑟", 1000, 90, 0.1, 0.2,120);
 	u2 = new Urse("后裔", 500, 200, 0.4, 0.3, 30);
-	$("#aa1").append(`<p class="aq1">角色：${u1.name}</p><p class=1"aqq2">血量：${u1.hp} 攻击：${u1.attack} 暴击：${u1.crit} 破甲：${u1.broken} 防御：${u1.def}</p>`)
+	$("#aa1").append(`<p class="aq1">角色：${u1.name}</p><p class="aqq2">血量：${u1.hp} 攻击：${u1.attack} 暴击：${u1.crit} 破甲：${u1.broken} 防御：${u1.def}</p>`)
 	$("#aa2").append(`<p class="aq1">角色：${u2.name}</p><p class="aqq2">血量：${u2.hp} 攻击：${u2.attack} 暴击：${u2.crit} 破甲：${u2.broken} 防御：${u2.def}</p>`)
 
 })
