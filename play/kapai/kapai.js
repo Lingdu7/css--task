@@ -34,8 +34,6 @@ function Urse(name, hp, attack, crit, broken, def) {
 			cr = "出现暴击"
 		}
 		var i = Math.round(c - (urs.def * (1 - this.broken)))
-		console.log((urs.def*(1-this.broken)));
-		console.log(1-this.broken);
 		if (i < 0) {
 			i = 1;
 		}
@@ -47,9 +45,6 @@ function Urse(name, hp, attack, crit, broken, def) {
 		}
 	}
 }
-
-
-
 
 
 var u1;
@@ -68,7 +63,7 @@ var b = 2;
 $("#sha1").click(function () {
 	if (u1) {
 		if (b % 2 === 0) {
-			$("#bb").append(`<span>* * * * * * * *  第${o}轮  * * * * * * * * </span>`)
+			$("#bb").append(`<span>* * * * * * * *  第${o}轮  * * * * * * * * </span>`)；
 			o++
 		}
 		b++
