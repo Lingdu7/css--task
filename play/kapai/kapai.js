@@ -63,7 +63,7 @@ var b = 2;
 $("#sha1").click(function () {
 	if (u1) {
 		if (b % 2 === 0) {
-			$("#bb").append(`<span>* * * * * * * *  第${o}轮  * * * * * * * * </span>`)；
+			$("#bb").append(`<span>* * * * * * * *  第${o}轮  * * * * * * * * </span>`)
 			o++
 		}
 		b++
