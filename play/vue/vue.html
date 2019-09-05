@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<link rel="stylesheet" href="vue.css">
+</head>
+
+<body>
+  <div class="flex">
+  <div id="boxing">
+      <h3>拳击沙袋</h3>
+        <div id="bag" v-bind:class="{ burst: bo }"></div>
+        <div id="bag-height">
+          <div :style="{ width: he+ '%' }">
+          </div>
+        </div>
+        <div id="but">
+          <button @click="less">锤</button>
+          <button @click="anew">恢复</button>
+        </div>
+      </div>
+  <div id="color">
+      <h3>方块换色</h3>
+    <aaaa></aaaa>
+  </div>
+  <div id="wath">
+      <h3>输入“监听”弹框</h3>
+		<input type="text" v-model="mag">
+    <p> {{ mag }} </p>
+  
+  </div>
+  <div id="mos">
+    <h3>抓取框内的鼠标坐标</h3>
+  <div id="mous" @mousemove="mou" class="mous"></div>
+  <span> 鼠标坐标X：{{ xx }}</span>
+  <span> 鼠标坐标Y：{{ yy }}</span>
+
+</div>
+</div>
+  <script src="vue.js"></script>
+</body>
+
+</html>
