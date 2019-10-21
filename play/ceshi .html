@@ -1,66 +1,32 @@
+
 <!DOCTYPE html>
-<html lang="zh_CN">
-
-    <head>
-        <meta charset="UTF-8">
-        <title>CSS样式:点击图片上传文件</title>
-        <!-- 引入样式 -->
-        <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
-        <style type="text/css">
-            /*定义图像以及大小*/
-            
-            .imageFileInput {
-                width: 200px;
-                height: 200px;
-                position: absolute;
-                background-color: red;
-                /*这里可以换成图片路径（background-image：../img/....）注意图片路径*/
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src='./jquery-1.11.1.min.js'></script>
+</head>
+<body>
+<li>
+         <div class='am-g'>
+          <div styel="width:100px; height:100px">
+		 
+		  </div>
+		  <div>
+		  <input type="file" name="imgUpload" id="imgUpload">
+		  </div>
+         </div>
+       </li>
+	   <script>
+	       $("#imgUpload").change(function(e) {
+          for (var i = 0; i < e.target.files.length; i++) {
+            var file = e.target.files.item(i);			
+            var freader = new FileReader();
+            freader.readAsDataURL(file);
+            freader.onload = function(e) {
+              var src = e.target.result;
+              $("#uploadhead").attr("src",src);
             }
-            /*定义上传*/
-            
-            .fileInput {
-                height: 100%;
-                width: 100%;
-                position: absolute;
-                right: 0;
-                top: 0;
-                opacity: 0;
-            }
-        </style>
-    </head>
-
-    <body>
-        <div class="imageFileInput" id="result">
-            <!--<input class="fileInput" type="file" id="" name="">-->
-            <input type="file" id="file" class="fileInput" name="file" accept="image/jpg,image/jpeg,image/png,image/PNG"/>
-            <div id="result"></div>
-        </div>
-    </body>
-
-</html>
-<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-<script type="text/javascript">
-    function ProcessFile(e) {
-        var file = document.getElementById('file').files[0];
-        if(file) {
-            var reader = new FileReader();
-            reader.onload = function(event) {
-                var txt = event.target.result;
-                var img = document.createElement("img");
-                img.src = txt; //将图片base64字符串赋值给img的src
-                // console.log(txt);
-                // document.getElementById("result").appendChild(img);
-                $('#result').css("background-image", "url(" + txt + ")");
-
-            };
-        }
-        reader.readAsDataURL(file);
-    }
-
-    function contentLoaded() {
-        document.getElementById('file').addEventListener('change',
-            ProcessFile, false);
-    }
-
-    window.addEventListener("DOMContentLoaded", contentLoaded, false);
-</script>
+          }
+        });
+		</script>
+		</body>
