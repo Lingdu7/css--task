@@ -7,6 +7,13 @@
     <style>
         .select {
             width: 60px;
+            outline-style: none;
+            border:1px #2b74e2 solid;
+            background-color: #fff;
+            box-shadow: none;
+            border-radius: 5px;
+            height: 22px;
+            line-height: 22px;
         }
 
         .select:hover {
@@ -34,6 +41,7 @@
             outline-style: none;
             box-sizing: border-box;
             padding-left: 5px;
+            line-height: 18px;
         }
 
         .hr {
@@ -115,18 +123,19 @@
                 <option value="4">4</option>
             </select></div>
         <div id="room">
-            <p class="roomTitle">房间面积</p>
-            <div id="roomBox" class="flex">
-                <span><span class="title">房间1：</span><input type="text"></span>
-                <span><span class="title">房间2：</span><input type="text"></span>
-                <span><span class="title">房间3：</span><input type="text"></span>
+            <p class="roomTitle">卧室面积</p>
+            <div id="roomBox" style="margin-top: 5px;" class="flex">
+                <span><span class="title">卧室1：</span><input type="text"></span>
+                <span><span class="title">卧室2：</span><input type="text"></span>
+                <span><span class="title">卧室3：</span><input type="text"></span>
             </div>
 
         </div>
         <div class="flex"><span class="title">区域价：</span><select style="margin-right: 10px;" class="select"
                 id="proportion">
                 <option value="0.4">40%</option>
-                <option value="0.50" selected>50%</option>
+                <option value="0.5" selected>50%</option>
+                <option value="0.6">60%</option>
             </select> <span class="prompt">*分摊只计算面积不合适，应考虑区域价值</span>
         </div>
         <div>
@@ -144,20 +153,20 @@
             function rent(price, rooms, proportion) {
                 var roomTickets = Number((price * proportion / rooms.length).toFixed(2))
                 // console.log('单房间基础:', roomTickets);
-                $('#result').append(`<p class="roomTitle">单房间基础:${roomTickets}</p>`, '<p class="hr"></p>')
+                $('#result').append(`<p class="roomTitle">卧室区域价:${roomTickets}</p>`, '<p class="hr"></p>')
                 var roomArea = 0;
                 var zj = 0;
                 var roomMoney = {}
                 $.each(rooms, function (index, item) {
                     roomArea += item
                 })
-                $('#result').append(`<p class="roomTitle">房间总平米:${roomArea}</p>`, '<p class="hr"></p>')
                 // console.log('房间总平米:', roomArea);
                 var m = Number((price * (1 - proportion) / roomArea).toFixed(2))
-                console.log('一平米单价:', m);
+                $('#result').append(`<p class="roomTitle">卧室总平米:${roomArea}</p> <p class="hr"></p> <p class="roomTitle"> 一平米单价:${m}</p>`, '<p class="hr"></p>')
+                // console.log('一平米单价:', m);
                 $.each(rooms, function (index, item) {
                     roomMoney[index] = Number((item * m + roomTickets).toFixed(2))
-                    $('#result').append(`<p class="roomTitle">${item}房间面积价：${(item * m).toFixed(2)}</p><p class="roomTitle">${item}房间总价格：${roomMoney[index]}</p>`, '<p class="hr"></p>')
+                    $('#result').append(`<p class="roomTitle">${item}卧室面积价：${(item * m).toFixed(2)}</p><p class="roomTitle">${item}卧室总价格：${roomMoney[index]}</p>`, '<p class="hr"></p>')
                     // console.log(`房间面积价：${index}：${(item * m).toFixed(2)}`, `\n单房间总价：${index}：${roomMoney[index]}`);
                 })
 
@@ -174,7 +183,7 @@
                 var roomS = $('#rooms').val()
                 if (roomL.length < roomS) {
                     for (let index = roomL.length; index < roomS; index++) {
-                        $('#roomBox').append(`<span><span class="title">房间${index + 1}：</span><input type="text"></span>`)
+                        $('#roomBox').append(`<span><span class="title">卧室${index + 1}：</span><input type="text"></span>`)
                     }
                 }
                 if (roomL.length > roomS) {
@@ -196,15 +205,14 @@
                 var roomss = $('#roomBox input')
                 var isDate = true
                 if (!price) {
-                    alert('请输入参数')
+                    alert('请输入总租金')
                     return
                 }
-                console.log(roomss);
                 
                 $.each(roomss, function (index, item) {
                     rooms.push(Number(item.value))
                     if (Number(item.value) <= 0) {
-                        alert(`${index + 1}号房间面积错误`)
+                        alert(`卧室${index + 1}面积错误`)
                         isDate = false
                         return false
                     }
