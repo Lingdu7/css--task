@@ -53,9 +53,11 @@
             color: #666;
         }
 
-        #count {
+        .btn {
+            display: inline-block;
             width: 50px;
             margin-top: 30px;
+            margin-right: 10px;
             line-height: 20px;
             padding: 5px 10px;
             text-align: center;
@@ -99,7 +101,10 @@
                 <option value="0.6">60%</option>
             </select>
         </div>
-        <div id="count">计算</div>
+        <div>
+            <div id="count" class="btn">计算</div>
+            <div id="reset" class="btn">重置</div>
+        </div>
         <div id="result"></div>
     </div>
     <script src="https://misc.360buyimg.com/??jdf/lib/jquery-1.6.4.js"></script>
@@ -129,58 +134,74 @@
                 $.map(roomMoney, function (item, index) {
                     zj += item
                 })
-                $('#result').append(`<p class="roomTitle">总计:${zj}</p>`)
+                $('#result').append(`<p class="roomTitle">总计:${zj.toFixed(2)}</p>`)
                 // console.log(zj);
 
             }
+
+            function roomBlock() {
+                var roomL = $('#room > span')
+                var roomS = $('#rooms').val()
+                if (roomL.length < roomS) {
+                    for (let index = roomL.length; index < roomS; index++) {
+                        $('#room').append(`<span><span class="title">房间${index + 1}：</span><input type="text"></span>`)
+                    }
+                }
+                if (roomL.length > roomS) {
+                    for (let index = roomS; index < roomL.length; index++) {
+                        roomL[index].remove()
+                    }
+                }
+            }
+
             var price;
             var rooms = [];
             var proportion;
 
             function count() {
+                rooms = []
+                $('#result').empty()
                 price = Number($('#price').val())
                 proportion = Number($('#proportion').val())
                 var roomss = $('#room input')
-                var isDate=true
+                var isDate = true
                 if (!price) {
                     alert('请输入参数')
                     return
                 }
                 $.each(roomss, function (index, item) {
                     rooms.push(Number(item.value))
-                    if (Number(item.value)<=0) {
-                        alert(`${index+1}号房间面积错误`)
-                        isDate=false
+                    if (Number(item.value) <= 0) {
+                        alert(`${index + 1}号房间面积错误`)
+                        isDate = false
                         return false
                     }
                 })
-                if(isDate){
+                if (isDate) {
                     rent(price, rooms, proportion)
                 }
-                
-                
+
+
             }
 
             $('#count').click(function () { count() })
+            $('#rooms').change(function () {
+                roomBlock()
+            })
+            $('#reset').click(function () {
+                $('#price').val('')
+                $('#proportion').val(0.5)
+                $('#rooms').val(3)
+                $('#result').empty()
+                roomBlock()
+                var roomss = $('#room input')
+                $.each(roomss, function (index, item) {
+                    item.value = ''
+                })
+            })
         })
 
-        $('#rooms').change(function (e) {
-            console.log($('#rooms').val());
-            var roomL = $('#room > span')
-            var roomS = $('#rooms').val()
-            if (roomL.length < roomS) {
-                for (let index = roomL.length; index < roomS; index++) {
-                    $('#room').append(`<span><span class="title">房间${index + 1}：</span><input type="text"></span>`)
-                }
-            }
-            if (roomL.length > roomS) {
-                for (let index = roomS; index < roomL.length; index++) {
-                    roomL[index].remove()
 
-                }
-            }
-
-        })
 
     </script>
 </body>
