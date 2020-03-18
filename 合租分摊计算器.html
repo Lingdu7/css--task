@@ -8,14 +8,18 @@
         .select {
             width: 60px;
         }
+
         .select:hover {
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
         }
+
         input:hover {
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
         }
+
         .prompt {
-            font-size: 12px; color:rgb(214, 214, 214);
+            font-size: 12px;
+            color: rgb(214, 214, 214);
         }
 
         * {
@@ -83,6 +87,21 @@
         #room>span {
             margin-right: 10px;
         }
+
+        .flex{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        #room>div>span {
+           margin-right: 30px;
+           margin-bottom: 10px;
+        }
+        @media (max-width: 575.98px) {
+            .box {
+                margin: 0;
+            }
+        }
     </style>
 </head>
 
@@ -97,23 +116,26 @@
             </select></div>
         <div id="room">
             <p class="roomTitle">房间面积</p>
-            <span><span class="title">房间1：</span><input type="text"></span>
-            <span><span class="title">房间2：</span><input type="text"></span>
-            <span><span class="title">房间3：</span><input type="text"></span>
+            <div id="roomBox" class="flex">
+                <span><span class="title">房间1：</span><input type="text"></span>
+                <span><span class="title">房间2：</span><input type="text"></span>
+                <span><span class="title">房间3：</span><input type="text"></span>
+            </div>
+
         </div>
-        <div style="display: flex; align-items: center;"><span class="title">区域价：</span><select class="select"
+        <div class="flex"><span class="title">区域价：</span><select style="margin-right: 10px;" class="select"
                 id="proportion">
                 <option value="0.4">40%</option>
                 <option value="0.5" selected>50%</option>
                 <option value="0.6">60%</option>
-            </select> <span class="prompt" >&nbsp &nbsp *分摊只计算面积不合适，应考虑区域价值</span>
+            </select> <span class="prompt">*分摊只计算面积不合适，应考虑区域价值</span>
         </div>
         <div>
             <div id="count" class="btn">计算</div>
             <div id="reset" class="btn">重置</div>
         </div>
-        <span class="prompt" > *此计算结果仅为参考，可以根据实际情况酌情匀称</span><br>
-        <span class="prompt" > *不建议计算公用面积，易起纠纷</span>
+        <span class="prompt"> *此计算结果仅为参考，可以根据实际情况酌情匀称</span><br>
+        <span class="prompt"> *不建议计算公用面积，易起纠纷</span>
         <div id="result"></div>
     </div>
     <script src="https://misc.360buyimg.com/??jdf/lib/jquery-1.6.4.js"></script>
@@ -149,11 +171,11 @@
             }
 
             function roomBlock() {
-                var roomL = $('#room > span')
+                var roomL = $('#roomBox > span')
                 var roomS = $('#rooms').val()
                 if (roomL.length < roomS) {
                     for (let index = roomL.length; index < roomS; index++) {
-                        $('#room').append(`<span><span class="title">房间${index + 1}：</span><input type="text"></span>`)
+                        $('#roomBox').append(`<span><span class="title">房间${index + 1}：</span><input type="text"></span>`)
                     }
                 }
                 if (roomL.length > roomS) {
@@ -172,7 +194,7 @@
                 $('#result').empty()
                 price = Number($('#price').val())
                 proportion = Number($('#proportion').val())
-                var roomss = $('#room input')
+                var roomss = $('roomBox input')
                 var isDate = true
                 if (!price) {
                     alert('请输入参数')
@@ -203,7 +225,7 @@
                 $('#rooms').val(3)
                 $('#result').empty()
                 roomBlock()
-                var roomss = $('#room input')
+                var roomss = $('#roomBox input')
                 $.each(roomss, function (index, item) {
                     item.value = ''
                 })
