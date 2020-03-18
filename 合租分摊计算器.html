@@ -194,12 +194,14 @@
                 $('#result').empty()
                 price = Number($('#price').val())
                 proportion = Number($('#proportion').val())
-                var roomss = $('roomBox input')
+                var roomss = $('#roomBox input')
                 var isDate = true
                 if (!price) {
                     alert('请输入参数')
                     return
                 }
+                console.log(roomss);
+                
                 $.each(roomss, function (index, item) {
                     rooms.push(Number(item.value))
                     if (Number(item.value) <= 0) {
